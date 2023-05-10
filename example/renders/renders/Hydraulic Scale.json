@@ -1,0 +1,579 @@
+{
+    "title": "Hydraulic Scale",
+    "icon_data": {
+        "difficulty": 1,
+        "par_time": [
+            5,
+            10
+        ],
+        "statement": "This question, for starting ME2 students, is a deliberately easy refresher question to get you back into the swing of things."
+    },
+    "master_statement": "A piston of diameter \\(\\mathrm{D = 0.1\\,m}\\) is fitted inside a U-shaped tube filled with liquid mercury (with \\(\\mathrm{density = 13,540\\,kgm^{-3}}\\)), as shown by the sketch below. The mercury rises by \\(\\mathrm{h = 1\\,mm}\\) under the weight of the piston.",
+    "media": [
+        "Hydraulic Scale Image.png"
+    ],
+    "parts": [
+        {
+            "statement": "What is the mass \\(m\\) of the piston?",
+            "responses": [
+                {
+                    "response": {
+                        "grading": "toler_abs",
+                        "err": 0.001,
+                        "mode": "Matrix Numeric",
+                        "showUnits": false,
+                        "name": "responseNan",
+                        "negStyle": "minus",
+                        "numStyle": "thousands scientific",
+                        "weighting": 1,
+                        "comment": "",
+                        "answer": [
+                            [
+                                3.2,
+                                4.6
+                            ],
+                            [
+                                7.6,
+                                1.0
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "response": {
+                        "grading": "toler_abs",
+                        "err": 0.001,
+                        "mode": "Matrix Numeric",
+                        "showUnits": false,
+                        "name": "responseNan",
+                        "negStyle": "minus",
+                        "numStyle": "thousands scientific",
+                        "weighting": 1,
+                        "comment": "",
+                        "answer": [
+                            [
+                                3.2
+                            ],
+                            [
+                                7.6
+                            ],
+                            [
+                                5.6
+                            ]
+                        ]
+                    }
+                }
+            ],
+            "worked_solutions": [
+                {
+                    "text": "At a given horizontal level in a static fluid with a free surface we know that the pressure must be constant. This means that the fluid under the piston must have a pressure equal to that beneath the raised height of mercury. We can write a force balance for the piston (including its weight, atmospheric pressure acting on its top surface, and the pressure under it), and for the raised column of mercury at the height of the piston's face.\n                 \\(\\begin{equation}\n                 mg + p_{atm}A_{piston} = pA_{piston}\\hspace{0.5cm},\\hspace{0.5cm}pA_{column} = (\\rho g h + p_{atm})A_{column}\n                \\end{equation}\\)"
+                },
+                {
+                    "text": "We may combine these equations, cancelling out \\(p\\)."
+                },
+                {
+                    "equation": "\\(\\begin{eqnarray} \\frac{mg}{A_{piston}} + p_{atm} = &p& = \\rho g h + p_{atm}\\\\ \\frac{m}{\\pi (\\frac{ \\mathrm{0.1} }{2})^2} &=& \\rho h\\\\ m &=& \\rho \\pi h \\left(\\frac{\\mathrm{0.1}}{2}\\right)^2\\\\ m &=& \\pi(\\mathrm{13,540})(\\mathrm{0.001})(\\mathrm{0.05})^2\\\\ m &=& \\mathrm{0.1063 kg} \\end{eqnarray}\\)"
+                },
+                {
+                    "is_final_answer": true
+                }
+            ],
+            "final_answer": {
+                "text": "1.063 kg"
+            },
+            "structured_tutorial": [
+                {
+                    "text": "What is the mass \\(m\\) of the piston?",
+                    "response": {
+                        "grading": "toler_abs",
+                        "err": 0.001,
+                        "mode": "Matrix Numeric",
+                        "showUnits": false,
+                        "name": "responseNan",
+                        "negStyle": "minus",
+                        "numStyle": "thousands scientific",
+                        "weighting": 1,
+                        "comment": "",
+                        "answer": [
+                            [
+                                3.2,
+                                4.6
+                            ],
+                            [
+                                7.6,
+                                1.0
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }
+            ]
+        },
+        {
+            "statement": "What would be the effect of increasing the diameter of the gauge-tube from 2 mm to 4 mm?",
+            "response": {
+                "mode": "Non Permuting Multiple Choice",
+                "answer": 2,
+                "choices": [
+                    "<p>\\(h\\) decreases</p>",
+                    "<p>\\(h\\) remains the same</p>",
+                    "<p>\\(h\\) increases</p>"
+                ],
+                "name": "responseNan",
+                "weighting": 1,
+                "comment": "",
+                "display": "vertical"
+            },
+            "worked_solutions": [
+                {
+                    "text": "As the expression for pressure in the gauge-tube is not dependent on its cross-sectional area, the size of the tube makes causes no change to \\(h\\)."
+                },
+                {
+                    "text": "We may combine these equations, cancelling out \\(p\\)."
+                },
+                {
+                    "equation": "\\(\\begin{eqnarray} \\frac{mg}{A_{piston}} + p_{atm} = &p& = \\rho g h + p_{atm}\\\\ \\frac{m}{\\pi (\\frac{ \\mathrm{0.1} }{2})^2} &=& \\rho h\\\\ m &=& \\rho \\pi h \\left(\\frac{\\mathrm{0.1}}{2}\\right)^2\\\\ m &=& \\pi(\\mathrm{13,540})(\\mathrm{0.001})(\\mathrm{0.05})^2\\\\ m &=& \\mathrm{0.1063 kg} \\end{eqnarray}\\)"
+                },
+                {
+                    "is_final_answer": true
+                }
+            ],
+            "final_answer": {
+                "text": "\\(h\\) remains the same"
+            }
+        },
+        {
+            "statement": "Test question with response area in structured tutorial",
+            "worked_solutions": [
+                {
+                    "text": "Null 1"
+                },
+                {
+                    "text": "Null 2"
+                },
+                {
+                    "text": "Null 3"
+                }
+            ],
+            "final_answer": {
+                "text": "Null"
+            },
+            "structured_tutorial": [
+                {
+                    "text": "Fill in the dropdown boxes below with your answer",
+                    "custom_response": {
+                        "layout": "<div class=\"advanced-eq dropdowns\"> <!-- <div class=\"eq-line\"> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_r \\)</p></td></tr> <tr><td><p>\\( \\partial t \\)</p></td></tr> </table> <p>\\( + u_r\\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_r\\)</p></td></tr> <tr><td><p>\\( \\partial r \\)</p></td></tr> </table> <p>\\( + \\)</p> <table class=\"fraction\"> <tr><td><p>\\( u_{\\theta}\\)</p></td></tr> <tr><td><p>\\( r \\)</p></td></tr> </table> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_r\\)</p></td></tr> <tr><td><p>\\( \\partial \\theta \\)</p></td></tr> </table> <p>\\( + u_z\\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_r\\)</p></td></tr> <tr><td><p>\\( \\partial z \\)</p></td></tr> </table> <p>\\( - \\)</p> <table class=\"fraction\"> <tr><td><p>\\( u_{\\theta}^2 \\)</p></td></tr> <tr><td><p>\\( r \\)</p></td></tr> </table> <p>\\( = -\\frac{1}{\\rho} \\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\delta p \\)</p></td></tr> <tr><td><p>\\( \\delta r \\)</p></td></tr> </table> <p>\\( + \\vec{g} . \\hat{e_r} \\)</p> </div> --> <div class=\"eq-line\"> <table class=\"fraction\"> <tr><td><p>\\( \\partial\\)</p><div class=\"inline-resp\"><1></div> </td></tr> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><2></div></td></tr> </table> <p>\\( + \\)<div class=\"inline-resp\"><3></div></p> <table class=\"fraction\"> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><4></div></td></tr> <tr><td><p>\\( \\partial r \\)</p></td></tr> </table> <p>\\( + \\)</p> <table class=\"fraction\"> <tr><td><div class=\"inline-resp\"><5></div></td></tr> <tr><td><div class=\"inline-resp\"><6></div></td></tr> </table> <table class=\"fraction\"> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><7></div></td></tr> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><8></div></td></tr> </table> <p>\\( + \\)<div class=\"inline-resp\"><9></div></p> <table class=\"fraction\"> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><10></div></td></tr> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><11></div></td></tr> </table> <p>\\( + \\)</p> <table class=\"fraction\"> <tr><td><p>\\( u_{\\theta} u_r\\)</p></td></tr> <tr><td><p>\\( r\\)</p></td></tr> </table> <p>\\( = -\\frac{1}{\\rho r} \\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\delta \\)</p><div class=\"inline-resp\"><12></div></td></tr> <tr><td><p>\\( \\delta \\)</p><div class=\"inline-resp\"><13></div></td></tr> </table> <p>\\( + \\vec{g} . \\hat{e_{\\theta}} \\)</p> </div> <!-- <div class=\"eq-line\"> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_z \\)</p></td></tr> <tr><td><p>\\( \\partial t \\)</p></td></tr> </table> <p>\\( + u_r\\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_z \\)</p></td></tr> <tr><td><p>\\( \\partial r \\)</p></td></tr> </table> <p>\\( + \\)</p> <table class=\"fraction\"> <tr><td><p>\\( u_{\\theta}\\)</p></td></tr> <tr><td><p>\\( r \\)</p></td></tr> </table> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_z \\)</p></td></tr> <tr><td><p>\\( \\partial \\theta \\)</p></td></tr> </table> <p>\\( + u_z\\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_z \\)</p></td></tr> <tr><td><p>\\( \\partial z \\)</p></td></tr> </table> <p>\\( = -\\frac{1}{\\rho} \\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\delta p \\)</p></td></tr> <tr><td><p>\\( \\delta z \\)</p></td></tr> </table> <p>\\( + \\vec{g} . \\hat{e_z} \\)</p> </div>--></div><style media=\"screen\"> .advanced-eq { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; } .eq-line { display: flex; align-items: center; } .fraction td { text-align: center; display: flex; align-items: center; justify-content: center; } .fraction tr:nth-child(2) td { border-top: 0.1rem solid black; } .fraction p { padding: 0; margin: 0; } .fraction { border-collapse: collapse; margin: 0.4rem; } .dropdowns .inline-resp { padding: 2px; width: 50px; } .dropdowns .inline-resp .select2 { width: 50px; height: 25px; } .dropdowns .inline-resp .select2-container--bootstrap .select2-selection--single { padding: 3px 24px 3px 6px; }</style><script type=\"text/javascript\">/* We need to change the widths of the dropdown lists */jQuery(document).ready(function () { jQuery(\".doInPreview, .doInSession\").click(function () { jQuery(\".part.active .dropdowns .inline-resp .response\").css(\"width\", \"52px\"); console.log(this); });});</script>",
+                        "responses": [
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            },
+                            {
+                                "mode": "List",
+                                "answers": [
+                                    "\\(u_r\\)",
+                                    "\\(u_{\\theta}\\)",
+                                    "\\(u_z\\)",
+                                    "\\(p\\)",
+                                    "\\(r\\)",
+                                    "\\(\\theta\\)",
+                                    "\\(z\\)",
+                                    "\\(t\\)"
+                                ],
+                                "credits": [
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "name": "responseNan",
+                                "display": {
+                                    "display": "menu",
+                                    "permute": true
+                                },
+                                "grader": "exact",
+                                "weighting": 1,
+                                "comment": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "uid": "e7a195d1-34ed-4de7-8aad-0f1c2fce385b"
+}

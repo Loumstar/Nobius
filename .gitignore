@@ -1,12 +1,5 @@
-# All hidden files are removed except gitignore
-.*
-!.gitignore
-
-# Other
 __pycache__
-Scripts/*.txt
+venv
 
-# Renders
-renders/
-
-venv/
+*.zip
+*.log

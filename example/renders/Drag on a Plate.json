@@ -1,0 +1,89 @@
+{
+    "title": "Drag on a Plate",
+    "icon_data": {
+        "difficulty": 2,
+        "par_time": [
+            15,
+            20
+        ],
+        "statement": "This question requires only ME1 knowledge, and is a chance to refresh the technique of using control volumes. We will use this technique extensively throughout the year."
+    },
+    "master_statement": "A fluid with density \\(\\mathrm{\\rho = 800\\,kgm^{-3}}\\), flows at \\(\\mathrm{U_0 = 3\\,ms^{-1}}\\) over a flat plate of unit length and width. At the trailing edge the boundary-layer thickness is \\(\\mathrm{\\delta = 25\\,mm}\\). Assume the velocity at the trailing edge to be linear (as shown in Fig. 1), and the flow to be two-dimensional.",
+    "media": [
+        "Drag on a Plate Image.png"
+    ],
+    "parts": [
+        {
+            "statement": "Compute the mass flow rate across the top surface of the control volume (noted 'ab' in the image).",
+            "response": {
+                "mode": "Numeric",
+                "showUnits": true,
+                "grading": "toler_abs",
+                "err": 0.1,
+                "answer": {
+                    "num": 30,
+                    "units": "kg/s"
+                },
+                "comment": "",
+                "name": "responseNan",
+                "negStyle": "minus",
+                "numStyle": "thousands scientific",
+                "weighting": 1
+            },
+            "worked_solutions": [
+                {
+                    "media": [
+                        "A4-Q3a.jpg"
+                    ]
+                },
+                {
+                    "is_final_answer": true
+                }
+            ],
+            "final_answer": {
+                "text": "30 kg/s"
+            },
+            "structured_tutorial": [
+                {
+                    "h5p_link": "https://h5p.org/h5p/embed/981688"
+                }
+            ]
+        },
+        {
+            "statement": "Determine the drag force on the plate.",
+            "response": {
+                "mode": "Numeric",
+                "showUnits": true,
+                "answer": {
+                    "num": 30,
+                    "units": "N"
+                },
+                "comment": "",
+                "name": "responseNan",
+                "negStyle": "minus",
+                "numStyle": "thousands scientific",
+                "grading": "exact_value",
+                "weighting": 1
+            },
+            "worked_solutions": [
+                {
+                    "media": [
+                        "A4-Q3b.jpg"
+                    ]
+                },
+                {
+                    "is_final_answer": true
+                }
+            ],
+            "final_answer": {
+                "text": "30 N"
+            },
+            "structured_tutorial": [
+                {
+                    "h5p_link": "https://h5p.org/h5p/embed/981670"
+                }
+            ]
+        }
+    ],
+    "uid": "320aef82-dc94-4051-956e-489c930fc247"
+}
