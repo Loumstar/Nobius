@@ -1,0 +1,52 @@
+{# data: [[2, 3, 4],
+         [5, 6, 7],
+         [., ., .]]
+   with each number being the response area's "identifier" (<1>, <2> in the xml) #}
+
+{% macro matrixResponse(data, propname) %}
+<!-- CHANGE MATRIX ANSWERS BELOW. THESE CHANGES WILL BE REFLECTED IN THE NEXT RENDER -->
+<div style="display:none" data-propname="{{ propname }}.matrix_response">{{ data|tojson }}</div>
+<!--<p class="matrix-bracket" style="font-size:{{ data|length }}rem">{{ "(" if data[0]|length == 1 else "[" }}</p>-->
+<p class="matrix-bracket" style="font-size:{{ data|length }}rem">{{ "[" if data[0]|length == 1 else "[" }}</p>
+<table class="matrix-input">
+  {% for row in data %}
+  <tr class="vector-row">
+    {% for item in row %}
+    <td class="vector-item">
+      <{{ item }}>
+    </td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+<!--<p class="matrix-bracket" style="font-size:{{ data|length }}rem">{{ ")" if data[0]|length == 1 else "]" }}</p>-->
+<p class="matrix-bracket" style="font-size:{{ data|length }}rem">{{ "]" if data[0]|length == 1 else "]" }}</p>
+
+<style media="screen">
+  .vector-item {
+    width: 60px;
+  }
+
+  .matrix-bracket {
+    font-family: MathJax_Size4;
+    text-align: center;
+  }
+</style>
+
+<script>
+  jQuery(document).ready(function() {
+    /* Remove extra buttons */
+    jQuery(".vector-item").children().not(".response").css("display", "none");
+
+    /* Remove useless text nodes that appear for no apparently reason */
+    jQuery(".vector-item").contents().filter(function() {
+      return this.nodeType == 3;
+    }).remove();
+
+    /* This style needs to be input manually for some reason (calcs are removed by mobius) */
+    jQuery('.matrix-input input').css({
+      "width": "calc(100% - 14px)"
+    });
+  });
+</script>
+{% endmacro %}

@@ -1,0 +1,40 @@
+{% from 'addMedia.html' import addMedia %}
+
+{% macro stepByStepWorkedSolns(part, id, propname) %}
+
+{% for soln in part.worked_solutions %}
+{% set soln_propname = propname + ".worked_solutions." + loop.index|string %}
+<div class="sbs-step{{ ' active' if loop.first }}{{  ' second' if loop.index == 2 }}{{ ' last' if loop.last }}">
+  {% if soln.text %}
+  <p data-propname="{{ soln_propname }}.text">
+    <!-- CHANGE WORKED SOLUTIONS TEXT HERE -->
+    {{ soln.text }}
+  </p>
+  {% endif %}
+  {% if soln.equation %}
+  <p class="sbs-eq" data-propname="{{ soln_propname }}.equation">
+    <!-- CHANGE WORKED SOLUTIONS EQUATION HERE -->
+    {{ soln.equation }}
+  </p>
+  {% endif %}
+  {% if soln.media %}
+  {{ addMedia(soln.media, soln_propname) }}
+  {% endif %}
+  {% if soln.is_final_answer %}
+  <p data-propname="{{ soln_propname }}.is_final_answer">
+    <p>{{ part.final_answer.text }}</p>
+    {% if part.final_answer.media %}
+    {{ addMedia(part.final_answer.media) }}
+    {% endif %}
+  </p>
+  {% endif %}
+</div>
+{% if loop.first and loop.length > 1 %}
+<div class="sbs-nav" id="sbs-nav{{ id }}">
+  <div class="btn btn-default disabled sbs-step-up" id="sbs-step-up{{ id }}">⬆ Previous Step ⬆</div>
+  <div class="btn btn-default sbs-step-down" id="sbs-step-down{{ id }}">⬇ Next Step ⬇</div>
+  <div class="btn btn-default sbs-reveal-all" id="sbs-reveal-all{{ id }}">Show All</div>
+</div>
+{% endif %}
+{% endfor %}
+{% endmacro %}

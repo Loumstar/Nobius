@@ -1,0 +1,72 @@
+{
+    "List": {
+        "name": "responseNan",
+        "display": {
+            "display": "menu",
+            "permute": true
+        },
+        "grader": "exact",
+        "weighting": 1,
+        "comment": ""
+    },
+    "Maple": {
+        "name": "responseNan",
+        "type": "maple",
+        "plot": "",
+        "allow2d": 0,
+        "mathConversionMode": 0,
+        "maple": "evalb(($ANSWER)-($RESPONSE)=0);",
+        "weighting": 1,
+        "comment": "",
+        "custompreview": ""
+    },
+    "Non Permuting Multiple Choice": {
+        "name": "responseNan",
+        "display": "vertical",
+        "weighting": 1,
+        "comment": ""
+    },
+    "Non Permuting Multiple Selection": {
+        "name": "responseNan",
+        "display": "vertical",
+        "weighting": 1,
+        "comment": ""
+    },
+    "Numeric": {
+        "name": "responseNan",
+        "negStyle": "minus",
+        "answer": {
+            "units": ""
+        },
+        "numStyle": "thousands scientific",
+        "grading": "exact_value",
+        "showUnits": false,
+        "weighting": 1,
+        "comment": ""
+    },
+    "True False": {
+        "name": "responseNan",
+        "choices": ["true", "false"],
+        "weighting": 1,
+        "comment": ""
+    },
+    "Essay": {
+        "name": "responseNan",
+        "keywords": [],
+        "weighting": 1,
+        "comment": ""
+    },
+    "Multiple Selection": {
+        "name": "responseNan",
+        "weighting": 1,
+        "comment": ""
+    },
+    "Document Upload": {
+        "name": "responseNan",
+        "fileExtensions": ["jpg", "pdf", "png", "txt"],
+        "codeType": 0,
+        "forceUpload": false,
+        "nonGradeable": false,
+        "comment": ""
+    }
+}

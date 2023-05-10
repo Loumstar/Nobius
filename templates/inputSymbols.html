@@ -1,0 +1,29 @@
+{# Input Symbols help table (for units and variables) #}
+{% macro inputSymbols(data) %}
+<table class="input-symbols-table">
+  <tr class="code">
+    <th>Code</th>
+    {% for entry in data %}
+    <td><p>{{ entry[1] }}</p></td>
+    {% endfor %}
+  </tr>
+  <tr class="symbols">
+    <th>Symbol</th>
+    {% for entry in data %}
+    <td><p>{{ entry[0] }}</p></td>
+    {% endfor %}
+  </tr>
+</table>
+<!--
+<style media="screen">
+.imput-symbols-table {
+  color: grey;
+}
+
+.input-symbols-table th {
+  font-size: 1.5rem;
+  padding-right: 0.7rem;
+}
+</style>
+-->
+{% endmacro %}

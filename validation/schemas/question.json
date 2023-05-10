@@ -1,0 +1,150 @@
+{
+"$schema": "http://json-schema.org/draft/2019-09/schema#",
+    "title": "Schema for question.json file.",
+    "type": "object",
+    "properties": {
+        "title": {"type": "string"},
+        "master_statement": {"type": "string"},
+        "media": {
+            "type": "array",
+            "items": {"type": "string"}
+        },
+        "icon_data": {
+            "type": "object",
+            "properties": {
+                "difficulty": {
+                    "type": "integer",
+                    "enum": [1, 2, 3]
+                },
+                "par_time": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "statement": {"type": "string"}
+            },
+            "required": [
+                "difficulty",
+                "par_time"
+            ]
+        },
+        "parts": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "statement": {"type": "string"},
+                    "media": {
+                        "type": "array",
+                        "items": {"type": "string"}
+                    },
+                    "input_symbols": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "response": {"type": "object"},
+                    "responses": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"type": "object"}
+                    },
+                    "custom_response": {
+                        "type": "object",
+                        "properties": {
+                            "layout": {"type": "string"},
+                            "responses": {"type": ["array", "object"]}
+                        }
+                    },
+                    "final_answer": {
+                        "type": "object",
+                        "properties": {
+                            "text": {"type": "string"},
+                            "equation": {"type": "string"},
+                            "media": {
+                                "type": "array",
+                                "items": {"type": "string"}
+                            }
+                        }
+                    },
+                    "worked_solutions": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "text": {"type": "string"},
+                                "equation": {"type": "string"},
+                                "media": {
+                                    "type": "array",
+                                    "items": {"type": "string"}
+                                },
+                                "is_final_answer": {
+                                    "type": "boolean",
+                                    "const": true
+                                }
+                            }
+                        }
+                    },
+                    "structured_tutorial": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "text": {"type": "string"},
+                                "h5p_link": {"type": "string"},
+                                "media": {
+                                    "type": "array",
+                                    "items": {"type": "string"}
+                                },
+                                "response": {"type": "object"},
+                                "responses": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {"type": "object"}
+                                },
+                                "custom_response": {
+                                    "type": "object",
+                                    "properties": {
+                                        "layout": {"type": "string"},
+                                        "responses": {"type": ["array", "object"]}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "pre_response_text": {"type": "string"},
+                    "post_response_text": {"type": "string"}
+                },
+                "required": ["statement"],
+                "allOf": [
+                    {
+                        "if": {"required": ["response"]},
+                        "then": {"properties": {"responses": false}}
+                    },
+                    {
+                        "if": {"required": ["responses"]},
+                        "then": {"properties": {"response": false}}
+                    }
+                ]
+            }
+        },
+        "uid": {"type": "string"},
+        "algorithm": {"type": "string"}
+    },
+    "required": [
+        "title",
+        "parts",
+        "uid"
+    ]
+}

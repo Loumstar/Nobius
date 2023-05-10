@@ -1,0 +1,16 @@
+{% macro commentsBar(question_number) %}
+<div id="comments-bar-container">
+    <div class="comments-bar bar">
+        <div id="comment-btn" class="title">
+            <div>Q{{ question_number }} Comments</div>
+        </div>
+    </div>
+    <div class="comments-bar description">
+        <p>
+            View/make comments; ask/answer questions.
+            Give feedback on the questions to help us improve.
+            Comments are anonymous.
+        </p>
+    </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,572 @@
+{
+   "title": "Test",
+   "master_statement": "Something",
+   "parts": [
+      {
+         "statement": "Custom table",
+         "custom_response": {
+            "layout": "<div class=\"eq-line\"> <table class=\"fraction\"> <tr><td><p>\\( D \\)</p><div class=\"inline-resp\"><phi1></div> </td></tr> <tr><td><p>\\( D t \\)</p></td></tr> </table> <p>\\( = \\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\delta \\)</p> <div class=\"inline-resp\"><phi2></div></td></tr> <tr><td><p>\\( \\delta \\)</p> <div class=\"inline-resp\"><t></div></td></tr> </table> <p>\\( + \\mathbf{u} . \\mathbf{\\nabla} \\) <div class=\"inline-resp\"><phi3></div></p></div><style media=\"screen\"> .eq-line { display: flex; align-items: center; } .fraction td { text-align: center; display: flex; align-items: center; justify-content: center; } .fraction tr:nth-child(2) td { border-top: 0.1rem solid black; } .fraction p { padding: 0; margin: 0; } .fraction { border-collapse: collapse; margin: 0.4rem; } .inline-resp { width: 60px; padding: 2px; }</style><script> jQuery(document).ready(function() { /* Remove extra buttons */ jQuery(\".inline-resp\").children().not(\".response\").css(\"display\", \"none\"); /* Remove useless text nodes that appear for no apparently reason */ jQuery(\".inline-resp\").contents().filter(function() { return this.nodeType == 3; }).remove(); /* This style needs to be input manually for some reason (calcs are removed by mobius) */ jQuery('.inline-resp input').css({ \"width\": \"calc(100% - 14px)\", \"padding\": \"4px 4px\" }); });</script>",
+            "responses": {
+               "phi1": {
+                  "mode": "Maple",
+                  "mapleAnswer": "phi"
+               },
+               "phi2": {
+                  "mode": "Maple",
+                  "mapleAnswer": "phi"
+               },
+               "t": {
+                  "mode": "Maple",
+                  "mapleAnswer": "t"
+               },
+               "phi3": {
+                  "mode": "Maple",
+                  "mapleAnswer": "phi"
+               }
+            }
+         }
+      },
+      {
+         "statement": "<b>Q2.1</b> Dimentional analysis table response area",
+         "custom_response": {
+            "layout": "<table> <!-- Eqs --> <tr> <td></td> <th class=\"table-heading\">\\(\\vec{u}\\)</th> <th class=\"table-heading\">\\(\\dfrac{\\partial\\rho}{\\partial t}\\)</th> <th class=\"table-heading\">\\(u\\,\\dfrac{\\partial\\theta}{\\partial x}\\)</th> <th class=\"table-heading\">\\(\\dfrac{\\partial^{2}\\vec{u}}{\\partial x^{2}}\\)</th> <th class=\"table-heading\">\\(\\dfrac{\\partial}{\\partial t}\\)</th> <th class=\"table-heading\">\\(u\\,\\dfrac{\\partial}{\\partial x}\\)</th> <th class=\"table-heading\">\\(\\vec{s}\\)</th> <th class=\"table-heading\">\\(\\dfrac{p}{\\rho u^2}\\)</th> </tr> <!-- M --> <tr> <th>[\\( M \\)]</th> <td class=\"inline-resp\"><1></td> <td class=\"inline-resp\"><2></td> <td class=\"inline-resp\"><3></td> <td class=\"inline-resp\"><4></td> <td class=\"inline-resp\"><5></td> <td class=\"inline-resp\"><6></td> <td class=\"inline-resp\"><7></td> <td class=\"inline-resp\"><8></td> </tr> <!-- L --> <tr> <th>[\\( L \\)]</th> <td class=\"inline-resp\"><9></td> <td class=\"inline-resp\"><10></td> <td class=\"inline-resp\"><11></td> <td class=\"inline-resp\"><12></td> <td class=\"inline-resp\"><13></td> <td class=\"inline-resp\"><14></td> <td class=\"inline-resp\"><15></td> <td class=\"inline-resp\"><16></td> </tr> <!-- T --> <tr> <th>[\\( T \\)]</th> <td class=\"inline-resp\"><17></td> <td class=\"inline-resp\"><18></td> <td class=\"inline-resp\"><19></td> <td class=\"inline-resp\"><20></td> <td class=\"inline-resp\"><21></td> <td class=\"inline-resp\"><22></td> <td class=\"inline-resp\"><23></td> <td class=\"inline-resp\"><24></td> </tr> <!-- Theta --> <tr> <th>[\\( \\Theta \\)]</th> <td class=\"inline-resp\"><25></td> <td class=\"inline-resp\"><26></td> <td class=\"inline-resp\"><27></td> <td class=\"inline-resp\"><28></td> <td class=\"inline-resp\"><29></td> <td class=\"inline-resp\"><30></td> <td class=\"inline-resp\"><31></td> <td class=\"inline-resp\"><32></td> </tr></table><style media=\"screen\"> .table-heading { text-align: center; } .inline-resp { width: 60px; padding: 2px; }</style><script> jQuery(document).ready(function() { /* Remove extra buttons */ jQuery(\".inline-resp\").children().not(\".response\").css(\"display\", \"none\"); /* Remove useless text nodes that appear for no apparently reason */ jQuery(\".inline-resp\").contents().filter(function() { return this.nodeType == 3; }).remove(); /* This style needs to be input manually for some reason (calcs are removed by mobius) */ jQuery('.inline-resp input').css({ \"width\": \"calc(100% - 14px)\", \"padding\": \"4px 4px\" }).removeAttr(\"placeholder\"); });</script>",
+            "responses": [
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "-3"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "-1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "-1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "-1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "-1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "-1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "-1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "-1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "1"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               },
+               {
+                  "mode": "Numeric",
+                  "answer": {
+                     "num": "0"
+                  }
+               }
+            ]
+         }
+      },
+      {
+        "statement": "<b>Q9.1</b> Ranks and order ",
+        "custom_response": {
+          "layout": "<table> <!-- Eqs --> <tr> <td></td> <th class=\"table-heading\">\\(\\vec{u}\\)</th> <th class=\"table-heading\">\\(\\sigma_{12}\\)</th> <th class=\"table-heading\">\\(\\underline{\\underline{\\sigma}}\\)</th> <th class=\"table-heading\">\\(\\hat{n}\\)</th> <th class=\"table-heading\">\\(\\overrightarrow{\\mathcal{T}}\\)</th> <th class=\"table-heading\">\\(\\overrightarrow{\\mathrm{div}}\\left(\\sigma\\right)\\)</th> <th class=\"table-heading\">\\(\\underline{\\underline{\\sigma}}\\hat{n}\\)</th> <th class=\"table-heading\">\\(n_2\\)</th> <th class=\"table-heading\">\\(\\dfrac{\\partial{}\\sigma_{22}}{\\partial{}y}\\)</th> </tr> <!-- Rank --> <tr class=\"row-underline\"> <th>Rank</th> <td class=\"inline-resp\"><1></td> <td class=\"inline-resp\"><2></td> <td class=\"inline-resp\"><3></td> <td class=\"inline-resp\"><4></td> <td class=\"inline-resp\"><5></td> <td class=\"inline-resp\"><6></td> <td class=\"inline-resp\"><7></td> <td class=\"inline-resp\"><8></td> <td class=\"inline-resp\"><9></td> </tr> <!-- M --> <tr> <th>[\\( M \\)]</th> <td class=\"inline-resp\"><10></td> <td class=\"inline-resp\"><11></td> <td class=\"inline-resp\"><12></td> <td class=\"inline-resp\"><13></td> <td class=\"inline-resp\"><14></td> <td class=\"inline-resp\"><15></td> <td class=\"inline-resp\"><16></td> <td class=\"inline-resp\"><17></td> <td class=\"inline-resp\"><18></td> </tr> <!-- L --> <tr> <th>[\\( L \\)]</th> <td class=\"inline-resp\"><19></td> <td class=\"inline-resp\"><20></td> <td class=\"inline-resp\"><21></td> <td class=\"inline-resp\"><22></td> <td class=\"inline-resp\"><23></td> <td class=\"inline-resp\"><24></td> <td class=\"inline-resp\"><25></td> <td class=\"inline-resp\"><26></td> <td class=\"inline-resp\"><27></td> </tr> <!-- T --> <tr> <th>[\\( T \\)]</th> <td class=\"inline-resp\"><28></td> <td class=\"inline-resp\"><29></td> <td class=\"inline-resp\"><30></td> <td class=\"inline-resp\"><31></td> <td class=\"inline-resp\"><32></td> <td class=\"inline-resp\"><33></td> <td class=\"inline-resp\"><34></td> <td class=\"inline-resp\"><35></td> <td class=\"inline-resp\"><36></td> </tr></table><style media=\"screen\"> .table-heading { text-align: center; } .inline-resp { width: 60px; padding: 2px; } .row-underline > td { border-bottom: 2px solid black; }</style><script> jQuery(document).ready(function() { /* Remove extra buttons */ jQuery(\".inline-resp\").children().not(\".response\").css(\"display\", \"none\"); /* Remove useless text nodes that appear for no apparently reason */ jQuery(\".inline-resp\").contents().filter(function() { return this.nodeType == 3; }).remove(); /* This style needs to be input manually for some reason (calcs are removed by mobius) */ jQuery('.inline-resp input').css({ \"width\": \"calc(100% - 14px)\", \"padding\": \"4px 4px\" }).removeAttr(\"placeholder\"); });</script>",
+          "responses": [
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "2"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-2"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-2"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-1"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-2"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-2"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-2"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-2"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-2"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "0"
+              }
+            },
+            {
+              "mode": "Numeric",
+              "answer": {
+                "num": "-2"
+              }
+            }
+          ]
+        }
+      },
+      {
+         "statement": "<b>Q5.2</b> Euler in cylindrical Coords <br><br> Give your answer for the \\( \\theta \\) component",
+         "custom_response": {
+           "layout": "<div class=\"advanced-eq dropdowns\"> <!-- <div class=\"eq-line\"> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_r \\)</p></td></tr> <tr><td><p>\\( \\partial t \\)</p></td></tr> </table> <p>\\( + u_r\\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_r\\)</p></td></tr> <tr><td><p>\\( \\partial r \\)</p></td></tr> </table> <p>\\( + \\)</p> <table class=\"fraction\"> <tr><td><p>\\( u_{\\theta}\\)</p></td></tr> <tr><td><p>\\( r \\)</p></td></tr> </table> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_r\\)</p></td></tr> <tr><td><p>\\( \\partial \\theta \\)</p></td></tr> </table> <p>\\( + u_z\\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_r\\)</p></td></tr> <tr><td><p>\\( \\partial z \\)</p></td></tr> </table> <p>\\( - \\)</p> <table class=\"fraction\"> <tr><td><p>\\( u_{\\theta}^2 \\)</p></td></tr> <tr><td><p>\\( r \\)</p></td></tr> </table> <p>\\( = -\\frac{1}{\\rho} \\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\delta p \\)</p></td></tr> <tr><td><p>\\( \\delta r \\)</p></td></tr> </table> <p>\\( + \\vec{g} . \\hat{e_r} \\)</p> </div> --> <div class=\"eq-line\"> <table class=\"fraction\"> <tr><td><p>\\( \\partial\\)</p><div class=\"inline-resp\"><1></div> </td></tr> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><2></div></td></tr> </table> <p>\\( + \\)<div class=\"inline-resp\"><3></div></p> <table class=\"fraction\"> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><4></div></td></tr> <tr><td><p>\\( \\partial r \\)</p></td></tr> </table> <p>\\( + \\)</p> <table class=\"fraction\"> <tr><td><div class=\"inline-resp\"><5></div></td></tr> <tr><td><div class=\"inline-resp\"><6></div></tr> </table> <table class=\"fraction\"> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><7></div></td></tr> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><8></div></td></tr> </table> <p>\\( + \\)<div class=\"inline-resp\"><9></div></p> <table class=\"fraction\"> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><10></div></td></tr> <tr><td><p>\\( \\partial \\)</p><div class=\"inline-resp\"><11></div></td></tr> </table> <p>\\( + \\)</p> <table class=\"fraction\"> <tr><td><p>\\( u_{\\theta} u_r\\)</p></td></tr> <tr><td><p>\\( r\\)</p></td></tr> </table> <p>\\( = -\\frac{1}{\\rho r} \\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\delta \\)</p><div class=\"inline-resp\"><12></div></td></tr> <tr><td><p>\\( \\delta \\)</p><div class=\"inline-resp\"><13></div></td></tr> </table> <p>\\( + \\vec{g} . \\hat{e_{\\theta}} \\)</p> </div> <!-- <div class=\"eq-line\"> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_z \\)</p></td></tr> <tr><td><p>\\( \\partial t \\)</p></td></tr> </table> <p>\\( + u_r\\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_z \\)</p></td></tr> <tr><td><p>\\( \\partial r \\)</p></td></tr> </table> <p>\\( + \\)</p> <table class=\"fraction\"> <tr><td><p>\\( u_{\\theta}\\)</p></td></tr> <tr><td><p>\\( r \\)</p></td></tr> </table> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_z \\)</p></td></tr> <tr><td><p>\\( \\partial \\theta \\)</p></td></tr> </table> <p>\\( + u_z\\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\partial u_z \\)</p></td></tr> <tr><td><p>\\( \\partial z \\)</p></td></tr> </table> <p>\\( = -\\frac{1}{\\rho} \\)</p> <table class=\"fraction\"> <tr><td><p>\\( \\delta p \\)</p></td></tr> <tr><td><p>\\( \\delta z \\)</p></td></tr> </table> <p>\\( + \\vec{g} . \\hat{e_z} \\)</p> </div>--></div><style media=\"screen\"> .advanced-eq { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; } .eq-line { display: flex; align-items: center; } .fraction td { text-align: center; display: flex; align-items: center; justify-content: center; } .fraction tr:nth-child(2) td { border-top: 0.1rem solid black; } .fraction p { padding: 0; margin: 0; } .fraction { border-collapse: collapse; margin: 0.4rem; } .dropdowns .inline-resp { padding: 2px; width: 50px; } .dropdowns .inline-resp .select2 { width: 50px; height: 25px; } .dropdowns .inline-resp .select2-container--bootstrap .select2-selection--single { padding: 3px 24px 3px 6px; }</style><script type=\"text/javascript\">/* We need to change the widths of the dropdown lists */jQuery(document).ready(function () { jQuery(\".doInPreview, .doInSession\").click(function () { jQuery(\".part.active .dropdowns .inline-resp .response\").css(\"width\", \"52px\"); console.log(this); });});</script>",
+           "responses": [
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 1, 0, 0, 0, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 0, 0, 0, 0, 0, 0, 1]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [1, 0, 0, 0, 0, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 1, 0, 0, 0, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 1, 0, 0, 0, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 0, 0, 0, 1, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 1, 0, 0, 0, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 0, 0, 0, 0, 1, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 0, 1, 0, 0, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 1, 0, 0, 0, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 0, 0, 0, 0, 0, 1, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 0, 0, 1, 0, 0, 0, 0]
+             },
+             {
+               "mode": "List",
+               "answers": ["\\(u_r\\)", "\\(u_{\\theta}\\)", "\\(u_z\\)", "\\(p\\)", "\\(r\\)", "\\(\\theta\\)", "\\(z\\)", "\\(t\\)"],
+               "credits": [0, 1, 0, 0, 0, 0, 0, 0]
+             }
+
+           ]
+         },
+         "worked_solutions": [
+            {
+               "text": "Define \\(\\vec{x}=\\left(r,\\theta,z\\right)\\) and \\(\\vec{u}=\\left(u_r,u_\\theta,u_z\\right)\\). It will help to write out \\(\\underline{\\underline{\\mathrm{grad}}}(\\vec{u})\\) in these cylindrical coordinates, which we take from your answer to Question 3(c) in the Maths for Fluids problem sheet:"
+            },
+            {
+               "equation": "\\begin{equation*} \\underline{\\underline{\\mathrm{grad}}}(\\vec{u})= \\begin{bmatrix} \\dfrac{\\partial{}u_r}{\\partial{}r} &amp; \\dfrac{1}{r}\\left(\\dfrac{\\partial{}u_r}{\\partial{}\\theta}-u_\\theta\\right) &amp; \\dfrac{\\partial{}u_r}{\\partial{}z}\\\\[12pt] \\dfrac{\\partial{}u_\\theta}{\\partial{}r} &amp; \\dfrac{1}{r}\\left(\\dfrac{\\partial{}u_\\theta}{\\partial{}\\theta}+u_r\\right) &amp; \\dfrac{\\partial{}u_\\theta}{\\partial{}z}\\\\[12pt] \\dfrac{\\partial{}u_z}{\\partial{}r} &amp; \\dfrac{1}{r}\\dfrac{\\partial{}u_z}{\\partial{}\\theta} &amp; \\dfrac{\\partial{}u_z}{\\partial{}z}\\\\ \\end{bmatrix} \\end{equation*}"
+            }
+         ]
+      },
+      {
+        "statement": "<b>Q11.2</b> Laplacian of a vector",
+        "custom_response": {
+          "layout": "<p>\\( \\overrightarrow{\\mathrm{Lap}}(\\vec{u}) = \\)</p><p class=\"matrix-bracket\">(</p><table class=\"vector-custom-input\"> <tr><td><1></td></tr> <tr><td><2></td></tr> <tr><td><3></td></tr></table><p class=\"matrix-bracket\">)</p><style media=\"screen\"> .matrix-bracket { font-family: MathJax_Size4; text-align: center; font-size: 3rem; }</style>",
+          "responses": [
+            {
+              "mode": "List",
+              "answers": [
+                "\\(\\frac{\\partial^2 u}{\\partial x^2}+\\frac{\\partial^2 u}{\\partial y^2}+\\frac{\\partial^2 u}{\\partial z^2}\\)",
+                "\\(\\frac{\\partial^2 u}{\\partial x^2}+\\frac{\\partial^2 v}{\\partial y^2}+\\frac{\\partial^2 w}{\\partial z^2}\\)",
+                "\\(\\frac{\\partial^2 u}{\\partial x^2}+\\frac{\\partial^2 v}{\\partial x^2}+\\frac{\\partial^2 w}{\\partial x^2}\\)"
+              ],
+              "credits": [1, 0, 0]
+            },
+            {
+              "mode": "List",
+              "answers": [
+                "\\(\\frac{\\partial^2 v}{\\partial x^2}+\\frac{\\partial^2 v}{\\partial y^2}+\\frac{\\partial^2 v}{\\partial z^2}\\)",
+                "\\(\\frac{\\partial^2 v}{\\partial x^2}+\\frac{\\partial^2 v}{\\partial y^2}+\\frac{\\partial^2 w}{\\partial z^2}\\)",
+                "\\(\\frac{\\partial^2 u}{\\partial y^2}+\\frac{\\partial^2 v}{\\partial y^2}+\\frac{\\partial^2 w}{\\partial y^2}\\)"
+              ],
+              "credits": [1, 0, 0]
+            },
+            {
+              "mode": "List",
+              "answers": [
+                "\\(\\frac{\\partial^2 w}{\\partial x^2}+\\frac{\\partial^2 w}{\\partial y^2}+\\frac{\\partial^2 w}{\\partial z^2}\\)",
+                "\\(\\frac{\\partial^2 w}{\\partial x^2}+\\frac{\\partial^2 v}{\\partial y^2}+\\frac{\\partial^2 w}{\\partial z^2}\\)",
+                "\\(\\frac{\\partial^2 u}{\\partial z^2}+\\frac{\\partial^2 v}{\\partial z^2}+\\frac{\\partial^2 w}{\\partial z^2}\\)"
+              ],
+              "credits": [1, 0, 0]
+            }
+          ]
+        }
+      }
+   ],
+   "uid": "23318cef-81b0-4050-b6b5-e36218a4a157"
+}

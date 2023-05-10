@@ -1,0 +1,23 @@
+{# Generate the HTML to display addMedia #}
+{% macro addMedia(media, propname=None) -%}
+{% if propname == None %}
+<div class="media-container">
+{% else %}
+<div class="media-container" data-propname="{{ propname + ".media" if propname else "media" }}">
+{% endif %}
+  {% for item in media %}
+  {# Place media in HTML depending of file type #}
+  {% if item[:2] == "A4" %}
+  <img alt="{{ item[:-4] }}" src="__BASE_URI__{{ sheetName|urlencode }}/{{ item|urlencode }}" class="a4-media">
+  {% elif item[-3:] in ["jpg", "png"] %}
+  <img alt="{{ item[:-4] }}" src="__BASE_URI__{{ sheetName|urlencode }}/{{ item|urlencode }}">
+  {% elif item[-3:] in ["mp4"] %}
+  <video alt="{{ item[:-4] }}" controls="true" src="__BASE_URI__{{ sheetName|urlencode }}/{{ item|urlencode }}">&nbsp;</video>
+  {% else %}
+  <div style="background: red;">
+    <p style="color: white;">Tried to load {{ item }} here</p>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+{%- endmacro %}

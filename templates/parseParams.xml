@@ -1,0 +1,40 @@
+{# Macros deal with adding a param for a response area #}
+{# Uses recursion to unnest dictionaries #}
+
+{% macro addParameter(key, value) -%}
+  <{{ key }}>
+    {%- if value is mapping -%}
+      {%- for k, v in value.items() -%}
+        {{- addParameter(k, v) -}}
+      {%- endfor -%}
+    {%- elif value|float(default="f") == "f" -%}
+      {{ "<![CDATA[ " + value|string + " ]]>" }}
+    {%- else -%}
+      {{ value }}
+    {%- endif -%}
+  </{{ key }}>
+{%- endmacro  %}
+
+{# Special Macro deals with list parameters like choices, answers and credits #}
+{% macro addListParameter(key, list) -%}
+  <{{ key }}>
+    {%- for value in list -%}
+      <{{ key[:-1] }}>
+        {%- if value|float(default="f") == "f" -%}
+          {{ "<![CDATA[ " + value|string + " ]]>" }}
+        {%- else -%}
+          {{ value }}
+        {%- endif -%}
+      </{{ key[:-1] }}>
+    {%- endfor -%}
+  </{{ key }}>
+{%- endmacro  %}
+
+{# Special Macro deals with the display parameter #}
+{% macro addDisplayParameter(param) -%}
+  {%- if param is mapping -%}
+    <display {{ 'permute="true"' if param.permute}}>{{ param.display }}</display>
+  {%- else -%}
+    <display>{{ param }}</display>
+  {%- endif -%}
+{%- endmacro  %}

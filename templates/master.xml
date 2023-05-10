@@ -1,0 +1,51 @@
+{% from 'makeQuestion.xml' import makeQuestion %}
+
+<courseModule>
+
+  <module>
+    <autoModule>true</autoModule>
+  </module>
+
+  {# Only create a group if SheetInfo was specified #}
+  {% if SheetInfo %}
+    <questionGroups>
+      <group uid="{{ SheetInfo.uid }}" weight="1.0">
+        <name>
+          <![CDATA[ Sheet #{{ SheetInfo.number }} - {{ SheetInfo.name }} ]]>
+        </name>
+        <description>
+          <![CDATA[ {{ SheetInfo.description }} ]]>
+        </description>
+        <privacy>10</privacy>
+
+        <questions>
+          {% for question in questions %}
+            <qRef uid="{{ question.uid }}" weight="{{ loop.index }}.0"/>
+          {% endfor %}
+        </questions>
+      </group>
+    </questionGroups>
+  {% endif %}
+
+  <questions>
+    {% for question in questions %}
+      {{ makeQuestion(question) }}
+    {% endfor %}
+  </questions>
+
+  {# Folder holding media (Can be specified even if no media is imported) #}
+  <webResources>
+    <folder id="0">
+      <name>
+        <![CDATA[  web_folders  ]]>
+      </name>
+      <description>
+        <![CDATA[    ]]>
+      </description>
+      <uri>
+        <![CDATA[  web_folders  ]]>
+      </uri>
+    </folder>
+  </webResources>
+
+</courseModule>

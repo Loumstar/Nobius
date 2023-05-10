@@ -1,0 +1,123 @@
+{% from 'addMedia.html' import addMedia %}
+{% from 'commentsBar.html' import commentsBar %}
+{% from 'questionIcons.html' import questionIcons %}
+{% from 'responseWrapper.html' import responseWrapper %}
+{% from 'answerHelp.html' import answerHelp %}
+{% from 'answerHelpButton.html' import answerHelpButton %}
+{% from 'inputSymbols.html' import inputSymbols %}
+
+{# Generate the actual question html to be displayed #}
+{% macro questionText(question) %}
+<link rel="stylesheet" href="{{ consts.THEME_LOCATION }}">
+
+<div class="wrapper">
+  <header>
+    <div class="header-top">
+
+      {% if question.title %}
+      <!-- CHANGE QUESTION TITLE WITHIN H1 SPAN LABELLED "TITLE" BELOW -->
+      <h1>
+        <span data-propname="number">{{ question.sheet_number }}.{{ question.number }}</span>
+        <span data-propname="title">{{ question.title }}</span>
+      </h1>
+      {% endif %}
+
+      {% if question.icon_data %}
+      {{ questionIcons(question.icon_data, "icon_data") }}
+      {% endif %}
+
+    </div>
+
+    <p class="master-statement" data-propname="master_statement">
+      <!-- CHANGE MASTER STATEMENT HERE -->
+      {{ question.master_statement }}
+    </p>
+
+    {% if question.media %}
+    {{ addMedia(question.media, "") }}
+    {% endif %}
+
+  </header>
+
+  {% if question.parts|length > 1 %}
+  <ul class="tabs-container">
+
+    {% for part in question.parts %}
+    <li class="tab {{ 'active' if loop.first }}" id="tab{{ loop.index }}" style="{{ 'max-width: 15rem;' if loop.length <= 3 }}">
+      <p>({{ alphabet[loop.index0] }})</p>
+    </li>
+    {% endfor %}
+
+    <li class="tab-end-line"></li>
+
+  </ul>
+  {% endif %}
+
+  <div class="parts-container">
+
+    {% for part in question.parts %}
+    {% set part_propname = "parts." + loop.index|string %}
+    {% set require_help_button = part.isMaple or (part.structured_tutorial or part.final_answer or part.worked_solutions) %}
+
+    <div class="part {{ 'active' if loop.first }}" id="part{{ loop.index }}">
+      <p class="part-statement" data-propname="{{ part_propname }}.statement">
+        <!-- CHANGE PART STATEMENT HERE -->
+        {{ part.statement }}
+      </p>
+
+      {% if part.media %}
+      {{ addMedia(part.media, part_propname) }}
+      {% endif %}
+
+      {#
+        The following implementation for response and responses is very messy, we need to eventually make a
+        better way of laying out the different types of response areas (matrix, normal, responses,... custom)
+      #}
+
+      {% if part.response %}
+      
+      {{ responseWrapper(part, loop.index, part_propname) }}
+
+      {% elif part.responses %}
+
+      {% set part_index = loop.index %}
+      {% for item in part.responses %}
+      {% set response_propname = part_propname + ".responses." + loop.index|string %}
+      {% set add_help = require_help_button and loop.last %}
+      {{ responseWrapper(item, part_index, response_propname, add_help) }}
+      {% endfor %}
+
+      {% elif part.custom_response %}
+
+      <div class="response-wrapper" data-propname="{{ part_propname }}.custom_response">
+        <p>{{ part.custom_response }}</p>
+        {% if require_help_button %}
+        {{ answerHelpButton(loop.index) }}
+        {% endif %}
+      </div>
+
+      {% endif %}
+
+      {% if require_help_button and not (part.response or part.responses or part.custom_response) %}
+      {{ answerHelpButton(loop.index) }}
+      {% endif %}
+
+      {% if part.input_symbols %}
+      {{ inputSymbols(part.input_symbols) }}
+      {% endif %}
+
+      {{ answerHelp(part, loop.index, part_propname, not responses) }}
+
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+<hr id="question-feedback-separator">
+
+{{ commentsBar(question.number) }}
+
+<script src="{{ consts.SCRIPTS_LOCATION }}" type="application/javascript">
+  /* Import Custom Javascript Code from the server */
+</script>{% endmacro %}

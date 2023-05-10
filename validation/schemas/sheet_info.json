@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft/2019-09/schema#",
+        "title": "Schema for SheetInfo.json file.",
+        "type": "object",
+        "properties": {
+            "name": {"type": "string"},
+            "number": {"type": "integer"},
+            "description": {"type": "string"},
+            "questions": {
+                "type": "array",
+                "items": {"type": "string"},
+                "minItems": 1
+            },
+            "uid": {"type": "string"}
+        },
+        "required": [
+            "name",
+            "number",
+            "description",
+            "questions",
+            "uid"
+        ]
+    }

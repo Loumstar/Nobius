@@ -1,0 +1,79 @@
+{
+    "title": "Viscometer",
+    "icon_data": {
+        "difficulty": 2,
+        "par_time": [
+            5,
+            10
+        ],
+        "statement": "This question from ME1 has been selected here to showcase some of the features of Mobius."
+    },
+    "master_statement": "A long cylindrical rotor of length \\(L\\) and radius \\(R\\) rotates inside a cylindrical stator at a steady angular velocity \\(\\omega \\). The small gap between the rotor has a uniform radial width \\(d\\) and contains a fluid with uniform viscosity \\(\\mu \\), while the flow is incompressible and laminar.  Neglecting the curvature of the rotor and using cartesian coordinates, the differential equation describing the fluid motion is \\(\\frac{\\mathrm{d}^2u}{\\mathrm{d}y^2}=0\\).",
+    "parts": [
+        {
+            "statement": "Find a simplified expression for the velocity profile, \\(u(y)\\), in terms of \\(\\omega\\), \\(R\\), \\(y\\), and \\(d\\). Define \\(y=0\\) at the radius of the rotor.",
+            "response": {
+                "mode": "Maple",
+                "mapleAnswer": "omega*R*(1 - (y/d))",
+                "comment": "",
+                "name": "responseNan",
+                "type": "maple",
+                "plot": "",
+                "allow2d": 0,
+                "mathConversionMode": 0,
+                "maple": "evalb(($ANSWER)-($RESPONSE)=0);",
+                "weighting": 1,
+                "custompreview": ""
+            },
+            "pre_response_text": "\\( u(y) = \\)",
+            "worked_solutions": [
+                {
+                    "media": [
+                        "A4-Q2a.png"
+                    ]
+                },
+                {
+                    "is_final_answer": true
+                }
+            ],
+            "final_answer": {
+                "text": "\\( \\omega R \\left(1 - \\frac{y}{d}\\right) \\)"
+            },
+            "structured_tutorial": "https://h5p.org/h5p/embed/981703"
+        },
+        {
+            "statement": "Which of the following gives the correct expression for the magnitude of the power, \\(P\\), required to drive the rotor?",
+            "response": {
+                "mode": "Non Permuting Multiple Choice",
+                "answer": 2,
+                "choices": [
+                    "<p>\\(P = \\frac{2\\pi L\\omega^2 R^3 \\mu}{d}\\)</p>",
+                    "<p>\\(P = \\frac{2\\pi L\\omega R^3 \\mu}{d}\\)</p>",
+                    "<p>\\(P = \\frac{\\pi L\\omega^2 d^3 \\mu}{R^2}\\)</p>",
+                    "<p>\\(P = \\frac{2\\pi L\\omega^3 d^2 \\mu^2}{R^2}\\)</p>"
+                ],
+                "name": "responseNan",
+                "weighting": 1,
+                "comment": "",
+                "display": "vertical"
+            },
+            "worked_solutions": [
+                {
+                    "media": [
+                        "A4-Q2b.png"
+                    ]
+                },
+                {
+                    "is_final_answer": true
+                }
+            ],
+            "final_answer": {
+                "text": "\\(P = \\frac{2\\pi L\\omega^2 R^3 \\mu}{d}\\)"
+            },
+            "structured_tutorial": "https://h5p.org/h5p/embed/981719"
+        }
+    ],
+    "uid": "f85e7851-56e3-40a3-8c31-8db2f055777c",
+    "modifiedBy": "a9c00f91-c0db-4696-b5c8-d454a0a09c6d",
+    "school": "20ce8c22-f096-4877-9f6c-bcaa95f1d968"
+}

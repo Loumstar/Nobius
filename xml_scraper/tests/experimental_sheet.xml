@@ -1,0 +1,1413 @@
+
+<courseModule>
+
+  <module>
+    <autoModule>true</autoModule>
+  </module>
+
+    <questionGroups>
+      <group uid="a94acccf-a5d8-43ae-8cfb-e912d2bd2567" weight="1.0">
+        <name>
+          <![CDATA[ Sheet #2 - Experimental Sheet V2 ]]>
+        </name>
+        <description>
+          <![CDATA[ Sheet to be bundled in lesson format ]]>
+        </description>
+        <privacy>10</privacy>
+
+        <questions>
+            <qRef uid="6c61a90f-8968-4a62-b26f-6f6e0fe15dc2" weight="1.0"/>
+            <qRef uid="f85e7851-56e3-40a3-8c31-8db2f055777c" weight="2.0"/>
+            <qRef uid="7a7d9848-d67f-49c1-9193-bf6d999ee913" weight="3.0"/>
+            <qRef uid="fb4a9a76-cf70-4f18-90f0-8e1df4d6af20" weight="4.0"/>
+        </questions>
+      </group>
+    </questionGroups>
+
+  <questions>
+        <question uid="6c61a90f-8968-4a62-b26f-6f6e0fe15dc2" modifiedBy="a9c00f91-c0db-4696-b5c8-d454a0a09c6d" school="20ce8c22-f096-4877-9f6c-bcaa95f1d968">
+    <mode>Inline</mode>
+    <name>
+      <![CDATA[ 2.1 Hydraulic Scale ]]>
+    </name>
+    <editing>useHTML</editing>
+    <privacy>10</privacy>
+    <allowRepublish>false</allowRepublish>
+    <attributeAuthor>true</attributeAuthor>
+    <modifiedIn>15.0</modifiedIn>
+    <difficulty>0.0</difficulty>
+    <text>
+                <![CDATA[ <link rel="stylesheet" href="/themes/b06b01fb-1810-4bde-bc67-60630d13a866">
+
+        <div class="wrapper">
+          <header>
+            <div style="width:100%" class="header-top">
+              <h1><span data-propname="number">2.1</span> <span data-propname="title">Hydraulic Scale</span></h1>
+              <div class="icons">
+            <div class="icon guidance">Guidance</div>
+            <svg class="icon" id="difficulty-rating-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 32">
+                <text class="skill-text" x="26" y="23">Skill Level</text>
+                <text data-propname="icon_data.difficulty" style="visibility:hidden">1</text>
+                <polygon class="star active" points="11,6.74 7.9,16.24 16,10.4 6,10.4 14.1,16.24"></polygon>
+                <polygon class="star" points="26,6.74 22.9,16.24 31,10.4 21,10.4 29.1,16.24"></polygon>
+                <polygon class="star" points="41,6.74 37.9,16.24 46,10.4 36,10.4 44.1,16.24"></polygon>
+            </svg>
+            <svg class="icon" id="par-time-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0.5 1 24.5 24">
+                <text data-propname="icon_data.par_time.1" style="visibility:hidden">5</text>
+                <text data-propname="icon_data.par_time.2" style="visibility:hidden">10</text>
+                <circle class="clock" id="clock-circle" cx="13" cy="13" r="10"></circle>
+                <path class="tick" d="M 13, 5.5 L 13, 5"></path>
+                <path class="tick" d="M 16.75, 6.505 L 17, 6.072"></path>
+                <path class="tick" d="M 19.495, 9.25 L 19.928, 9"></path>
+                <path class="tick" d="M 20.5, 13 L 21, 13"></path>
+                <path class="tick" d="M 19.495, 16.75 L 19.928, 17"></path>
+                <path class="tick" d="M 16.75, 19.495 L 17, 19.928"></path>
+                <path class="tick" d="M 13, 20.5 L 13, 21"></path>
+                <path class="tick" d="M 9.25, 19.495 L 9, 19.928"></path>
+                <path class="tick" d="M 6.505, 16.75 L 6.072, 17"></path>
+                <path class="tick" d="M 5.5, 13 L 5, 13"></path>
+                <path class="tick" d="M 6.505, 9.25 L 6.072, 9"></path>
+                <path class="tick" d="M 9.25, 6.505 L 9, 6.072"></path>
+                <text class="number" x="13" y="11.5">5-10</text>
+                <text class="mins" x="13" y="15.5">mins</text>
+                <path class="clock lb" d="M 13,3 a 10,10 90 0,1 4.999999999999999,1.339745962155613"></path>
+                <path class="clock ub" d="M 13,3 a 10,10 90 0,1 8.660254037844386,4.999999999999999"></path>
+            </svg>
+            <div class="icon blurb" data-propname="icon_data.statement">This question, for starting ME2 students, is a deliberately easy refresher question to get you back into the swing of things.</div>
+        </div>
+        <style>
+            .icons {
+                background-color: #27AE60;
+                grid-template-areas: 
+                    "guidance rating  par-time"
+                    "blurb    blurb   blurb";
+                border-radius: 1rem 3rem 1rem 1rem;
+            }
+
+            .icons:not(:hover) #difficulty-rating-svg text {
+                fill: #27AE60;
+            }
+
+            .icons:not(:hover) #par-time-svg text {
+                fill: #27AE60;
+            }
+
+            .icons:not(:hover) #difficulty-rating-svg .star {
+                fill: #27AE60;
+            }
+
+            .icons:not(:hover) #par-time-svg .clock {
+                stroke: #27AE60;
+            }
+            
+            .icons:not(:hover) #par-time-svg .tick {
+                stroke: #27AE60;
+            }
+        </style>
+
+            </div>
+
+            <p class="master-statement" data-propname="master_statement">A piston of diameter \(\mathrm{D = 0.1\,m}\) is fitted inside a U-shaped tube filled with liquid mercury (with \(\mathrm{density = 13,540\,kgm^{-3}}\)), as shown by the sketch below. The mercury rises by \(\mathrm{h = 1\,mm}\) under the weight of the piston.</p>
+
+            <div class="media-container" data-propname="media">
+          <img alt="Hydraulic Scale Image" src="__BASE_URI__Experimental%20Sheet%20V2/Hydraulic%20Scale%20Image.png">
+        </div>
+          </header>
+
+          <ul class="tabs-container">
+            <li class="tab active" id="tab1" style="max-width: 15rem;">
+              <p>(a)</p>
+            </li>
+            <li class="tab" id="tab2" style="max-width: 15rem;">
+              <p>(b)</p>
+            </li>
+          </ul>
+
+
+          <div class="parts-container">
+            <div class="part active" id="part1">
+              <p data-propname="parts.1.statement">What is the mass \(m\) of the piston?</p>
+
+
+              <div class="response-wrapper" data-propname="parts.1.response">
+                <1>
+              </div>
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn1">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn1">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws1">
+                  
+        <div class="worked-solutions-step active">
+          <p data-propname="parts.1.worked_solutions.1.text">At a given horizontal level in a static fluid with a free surface we know that the pressure must be constant. This means that the fluid under the piston must have a pressure equal to that beneath the raised height of mercury. We can write a force balance for the piston (including its weight, atmospheric pressure acting on its top surface, and the pressure under it), and for the raised column of mercury at the height of the piston's face.
+         \(\begin{equation}
+         mg + p_{atm}A_{piston} = pA_{piston}\hspace{0.5cm},\hspace{0.5cm}pA_{column} = (\rho g h + p_{atm})A_{column}
+        \end{equation}\)</p>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav1">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up1">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down1">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all1">Show All</div>
+        </div>
+        <div class="worked-solutions-step second">
+          <p data-propname="parts.1.worked_solutions.2.text">We may combine these equations, cancelling out \(p\).</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.1.worked_solutions.3.equation">\(\begin{eqnarray} \frac{mg}{A_{piston}} + p_{atm} = &p& = \rho g h + p_{atm}\\ \frac{m}{\pi (\frac{ \mathrm{0.1} }{2})^2} &=& \rho h\\ m &=& \rho \pi h \left(\frac{\mathrm{0.1}}{2}\right)^2\\ m &=& \pi(\mathrm{13,540})(\mathrm{0.001})(\mathrm{0.05})^2\\ m &=& \mathrm{0.1063 kg} \end{eqnarray}\)</p>
+        </div>
+        <div class="worked-solutions-step last">
+          <p data-propname="parts.1.worked_solutions.4.is_final_answer">
+            <p>1.063 kg</p>
+          </p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa1">
+                  <p data-propname="parts.1.final_answer.text">1.063 kg</p>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="part" id="part2">
+              <p data-propname="parts.2.statement">What would be the effect of increasing the diameter of the gauge-tube from 2 mm to 4 mm?</p>
+
+
+              <div class="response-wrapper" data-propname="parts.2.response">
+                <2>
+              </div>
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn2">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn2">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws2">
+                  
+        <div class="worked-solutions-step active">
+          <p data-propname="parts.2.worked_solutions.1.text">As the expression for pressure in the gauge-tube is not dependent on its cross-sectional area, the size of the tube makes causes no change to \(h\).</p>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav2">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up2">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down2">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all2">Show All</div>
+        </div>
+        <div class="worked-solutions-step second">
+          <p data-propname="parts.2.worked_solutions.2.text">We may combine these equations, cancelling out \(p\).</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.2.worked_solutions.3.equation">\(\begin{eqnarray} \frac{mg}{A_{piston}} + p_{atm} = &p& = \rho g h + p_{atm}\\ \frac{m}{\pi (\frac{ \mathrm{0.1} }{2})^2} &=& \rho h\\ m &=& \rho \pi h \left(\frac{\mathrm{0.1}}{2}\right)^2\\ m &=& \pi(\mathrm{13,540})(\mathrm{0.001})(\mathrm{0.05})^2\\ m &=& \mathrm{0.1063 kg} \end{eqnarray}\)</p>
+        </div>
+        <div class="worked-solutions-step last">
+          <p data-propname="parts.2.worked_solutions.4.is_final_answer">
+            <p>\(h\) remains the same</p>
+          </p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa2">
+                  <p data-propname="parts.2.final_answer.text">\(h\) remains the same</p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <hr id="question-feedback-separator">
+
+        <div id="comments-bar-container">
+            <div class="bar">
+                <div id="comment-btn" class="title">
+                    <div>Comments</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/web/Pjohnso000/Public_Html/Scripts/QuestionJavaScript.txt" type="application/javascript">
+          /* Import Custom Javascript Code from the server */
+        </script> ]]>
+    </text>
+    <weighting>1,1</weighting>
+    <numbering>alpha</numbering>
+
+    <parts>
+        <part>
+              <grading><![CDATA[ toler_abs ]]></grading>
+              <err>0.001</err>
+              <mode><![CDATA[ Numeric ]]></mode>
+              <showUnits>True</showUnits>
+              <answer><num>1.063</num><units><![CDATA[ kg ]]></units></answer>
+              <comment><![CDATA[  ]]></comment>
+              <name><![CDATA[ responseNan ]]></name>
+              <negStyle><![CDATA[ minus ]]></negStyle>
+              <numStyle><![CDATA[ thousands scientific ]]></numStyle>
+              <weighting>1</weighting>
+        </part>
+        <part>
+              <mode><![CDATA[ Non Permuting Multiple Choice ]]></mode>
+              <answer>2</answer>
+              <choices><choice><![CDATA[ <p>\(h\) decreases</p> ]]></choice><choice><![CDATA[ <p>\(h\) remains the same</p> ]]></choice><choice><![CDATA[ <p>\(h\) increases</p> ]]></choice></choices>
+              <name><![CDATA[ responseNan ]]></name>
+              <weighting>1</weighting>
+              <comment><![CDATA[  ]]></comment>
+              <display>vertical</display>
+        </part>
+    </parts>
+  </question>
+
+        <question uid="f85e7851-56e3-40a3-8c31-8db2f055777c" modifiedBy="a9c00f91-c0db-4696-b5c8-d454a0a09c6d" school="20ce8c22-f096-4877-9f6c-bcaa95f1d968">
+    <mode>Inline</mode>
+    <name>
+      <![CDATA[ 2.2 Viscometer ]]>
+    </name>
+    <editing>useHTML</editing>
+    <privacy>10</privacy>
+    <allowRepublish>false</allowRepublish>
+    <attributeAuthor>true</attributeAuthor>
+    <modifiedIn>15.0</modifiedIn>
+    <difficulty>0.0</difficulty>
+    <text>
+                <![CDATA[ <link rel="stylesheet" href="/themes/b06b01fb-1810-4bde-bc67-60630d13a866">
+
+        <div class="wrapper">
+          <header>
+            <div style="width:100%" class="header-top">
+              <h1><span data-propname="number">2.2</span> <span data-propname="title">Viscometer</span></h1>
+              <div class="icons">
+            <div class="icon guidance">Guidance</div>
+            <svg class="icon" id="difficulty-rating-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 32">
+                <text class="skill-text" x="26" y="23">Skill Level</text>
+                <text data-propname="icon_data.difficulty" style="visibility:hidden">2</text>
+                <polygon class="star active" points="11,6.74 7.9,16.24 16,10.4 6,10.4 14.1,16.24"></polygon>
+                <polygon class="star active" points="26,6.74 22.9,16.24 31,10.4 21,10.4 29.1,16.24"></polygon>
+                <polygon class="star" points="41,6.74 37.9,16.24 46,10.4 36,10.4 44.1,16.24"></polygon>
+            </svg>
+            <svg class="icon" id="par-time-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0.5 1 24.5 24">
+                <text data-propname="icon_data.par_time.1" style="visibility:hidden">5</text>
+                <text data-propname="icon_data.par_time.2" style="visibility:hidden">10</text>
+                <circle class="clock" id="clock-circle" cx="13" cy="13" r="10"></circle>
+                <path class="tick" d="M 13, 5.5 L 13, 5"></path>
+                <path class="tick" d="M 16.75, 6.505 L 17, 6.072"></path>
+                <path class="tick" d="M 19.495, 9.25 L 19.928, 9"></path>
+                <path class="tick" d="M 20.5, 13 L 21, 13"></path>
+                <path class="tick" d="M 19.495, 16.75 L 19.928, 17"></path>
+                <path class="tick" d="M 16.75, 19.495 L 17, 19.928"></path>
+                <path class="tick" d="M 13, 20.5 L 13, 21"></path>
+                <path class="tick" d="M 9.25, 19.495 L 9, 19.928"></path>
+                <path class="tick" d="M 6.505, 16.75 L 6.072, 17"></path>
+                <path class="tick" d="M 5.5, 13 L 5, 13"></path>
+                <path class="tick" d="M 6.505, 9.25 L 6.072, 9"></path>
+                <path class="tick" d="M 9.25, 6.505 L 9, 6.072"></path>
+                <text class="number" x="13" y="11.5">5-10</text>
+                <text class="mins" x="13" y="15.5">mins</text>
+                <path class="clock lb" d="M 13,3 a 10,10 90 0,1 4.999999999999999,1.339745962155613"></path>
+                <path class="clock ub" d="M 13,3 a 10,10 90 0,1 8.660254037844386,4.999999999999999"></path>
+            </svg>
+            <div class="icon blurb" data-propname="icon_data.statement">This question from ME1 has been selected here to showcase some of the features of Mobius.</div>
+        </div>
+        <style>
+            .icons {
+                background-color: #F5B041;
+                grid-template-areas: 
+                    "guidance rating  par-time"
+                    "blurb    blurb   blurb";
+                border-radius: 1rem 3rem 1rem 1rem;
+            }
+
+            .icons:not(:hover) #difficulty-rating-svg text {
+                fill: #F5B041;
+            }
+
+            .icons:not(:hover) #par-time-svg text {
+                fill: #F5B041;
+            }
+
+            .icons:not(:hover) #difficulty-rating-svg .star {
+                fill: #F5B041;
+            }
+
+            .icons:not(:hover) #par-time-svg .clock {
+                stroke: #F5B041;
+            }
+            
+            .icons:not(:hover) #par-time-svg .tick {
+                stroke: #F5B041;
+            }
+        </style>
+
+            </div>
+
+            <p class="master-statement" data-propname="master_statement">A long cylindrical rotor of length \(L\) and radius \(R\) rotates inside a cylindrical stator at a steady angular velocity \(\omega \). The small gap between the rotor has a uniform radial width \(d\) and contains a fluid with uniform viscosity \(\mu \), while the flow is incompressible and laminar. <br> Neglecting the curvature of the rotor and using cartesian coordinates, the differential equation describing the fluid motion is \(\frac{\mathrm{d}^2u}{\mathrm{d}y^2}=0\).</p>
+
+          </header>
+
+          <ul class="tabs-container">
+            <li class="tab active" id="tab1" style="max-width: 15rem;">
+              <p>(a)</p>
+            </li>
+            <li class="tab" id="tab2" style="max-width: 15rem;">
+              <p>(b)</p>
+            </li>
+          </ul>
+
+
+          <div class="parts-container">
+            <div class="part active" id="part1">
+              <p data-propname="parts.1.statement">Find a simplified expression for the velocity profile, \(u(y)\), in terms of \(\omega\), \(R\), \(y\), and \(d\). Define \(y=0\) at the radius of the rotor.</p>
+
+
+              <div class="response-wrapper" data-propname="parts.1.response">
+                <div class="pre-response-text">
+                  <p data-propname="parts.1.pre_response_text">\( u(y) = \)</p>
+                </div>
+                <1>
+                <div id="maple-help">
+            <svg id="maple-help-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                <circle cx="13" cy="13" r="10"></circle>
+                <text x="13" y="13">?</text>
+            </svg>
+            <div class="overlay">
+                <div class="text-wrapper">
+                    <div class="header">
+                        <h2>How to input equations</h2>
+                        <svg id="maple-help-exit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                            <circle cx="13" cy="13" r="10"></circle>
+                            <path class="cross" x="13" y="13" d="M 5.92,5.92 L 20.07,20.07"></path>
+                            <path class="cross" x="13" y="13" d="M 20.07,5.92 L 5.92,20.07"></path>
+                        </svg>
+                    </div>
+                    <div class="body">
+                        <p>The equation questions use Maple syntax to evaluate formulas. This is different from LaTeX in a couple of ways:</p>
+                        <p>Like in Python, adding, subtracting, multiplying and dividing can be done using the symbols <span class="code">+</span> <span class="code">-</span> <span class="code">*</span> <span class="code">/</span>.</p>
+                        <p>Remember to use an asterisk for multiplication, otherwise Maple will interpret it as one big variable!</p>
+                        <p>For Greek letters, type the full name of the letter (e.g. 'mu' will render \( \mu \). unlike LaTeX, there is no need for slashes).</p>
+                        <p>Click the omega Ω icon to preview your equation.</p>
+                        <p>For example, writing <span class="code">G*M*m/(r^2)</span> will produce:</p>
+                        <p class="latex">\( \frac{G M m}{r^2} \)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+              </div>
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn1">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn1">
+                  Worked Solutions
+                </li>
+                <li class="structured-tutorial-button btn btn-default" id="st-btn1">
+                  Structured Tutorial
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws1">
+                  
+        <div class="worked-solutions-step active">
+          <div class="media-container" data-propname="parts.1.worked_solutions.1.media">
+          <img alt="A4-Q2a" src="__BASE_URI__Experimental%20Sheet%20V2/A4-Q2a.png" class="a4-media">
+        </div>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav1">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up1">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down1">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all1">Show All</div>
+        </div>
+        <div class="worked-solutions-step second last">
+          <p data-propname="parts.1.worked_solutions.2.is_final_answer">
+            <p>\( \omega R \left(1 - \frac{y}{d}\right) \)</p>
+          </p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa1">
+                  <p data-propname="parts.1.final_answer.text">\( \omega R \left(1 - \frac{y}{d}\right) \)</p>
+                </div>
+
+                <div class="structured-tutorial" id="st1" data-propname="parts.1.structured_tutorial">
+                  <iframe src='https://h5p.org/h5p/embed/981703' width='1090' height='713' frameborder='0' allowfullscreen='allowfullscreen'></iframe>
+                  <script src='https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js' charset='UTF-8'></script>
+                </div>
+              </div>
+
+            </div>
+            <div class="part" id="part2">
+              <p data-propname="parts.2.statement">Which of the following gives the correct expression for the magnitude of the power, \(P\), required to drive the rotor?</p>
+
+
+              <div class="response-wrapper" data-propname="parts.2.response">
+                <2>
+              </div>
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn2">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn2">
+                  Worked Solutions
+                </li>
+                <li class="structured-tutorial-button btn btn-default" id="st-btn2">
+                  Structured Tutorial
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws2">
+                  
+        <div class="worked-solutions-step active">
+          <div class="media-container" data-propname="parts.2.worked_solutions.1.media">
+          <img alt="A4-Q2b" src="__BASE_URI__Experimental%20Sheet%20V2/A4-Q2b.png" class="a4-media">
+        </div>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav2">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up2">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down2">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all2">Show All</div>
+        </div>
+        <div class="worked-solutions-step second last">
+          <p data-propname="parts.2.worked_solutions.2.is_final_answer">
+            <p>\(P = \frac{2\pi L\omega^2 R^3 \mu}{d}\)</p>
+          </p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa2">
+                  <p data-propname="parts.2.final_answer.text">\(P = \frac{2\pi L\omega^2 R^3 \mu}{d}\)</p>
+                </div>
+
+                <div class="structured-tutorial" id="st2" data-propname="parts.2.structured_tutorial">
+                  <iframe src='https://h5p.org/h5p/embed/981719' width='1090' height='713' frameborder='0' allowfullscreen='allowfullscreen'></iframe>
+                  <script src='https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js' charset='UTF-8'></script>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <hr id="question-feedback-separator">
+
+        <div id="comments-bar-container">
+            <div class="bar">
+                <div id="comment-btn" class="title">
+                    <div>Comments</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/web/Pjohnso000/Public_Html/Scripts/QuestionJavaScript.txt" type="application/javascript">
+          /* Import Custom Javascript Code from the server */
+        </script> ]]>
+    </text>
+    <weighting>1,1</weighting>
+    <numbering>alpha</numbering>
+
+    <parts>
+        <part>
+              <mode><![CDATA[ Maple ]]></mode>
+              <mapleAnswer><![CDATA[ omega*R*(1 - (y/d)) ]]></mapleAnswer>
+              <comment><![CDATA[  ]]></comment>
+              <name><![CDATA[ responseNan ]]></name>
+              <type><![CDATA[ maple ]]></type>
+              <plot><![CDATA[  ]]></plot>
+              <allow2d>0</allow2d>
+              <mathConversionMode>0</mathConversionMode>
+              <maple><![CDATA[ evalb(($ANSWER)-($RESPONSE)=0); ]]></maple>
+              <weighting>1</weighting>
+              <custompreview><![CDATA[  ]]></custompreview>
+        </part>
+        <part>
+              <mode><![CDATA[ Non Permuting Multiple Choice ]]></mode>
+              <answer>2</answer>
+              <choices><choice><![CDATA[ <p>\(P = \frac{2\pi L\omega^2 R^3 \mu}{d}\)</p> ]]></choice><choice><![CDATA[ <p>\(P = \frac{2\pi L\omega R^3 \mu}{d}\)</p> ]]></choice><choice><![CDATA[ <p>\(P = \frac{\pi L\omega^2 d^3 \mu}{R^2}\)</p> ]]></choice><choice><![CDATA[ <p>\(P = \frac{2\pi L\omega^3 d^2 \mu^2}{R^2}\)</p> ]]></choice></choices>
+              <name><![CDATA[ responseNan ]]></name>
+              <weighting>1</weighting>
+              <comment><![CDATA[  ]]></comment>
+              <display>vertical</display>
+        </part>
+    </parts>
+  </question>
+
+        <question uid="7a7d9848-d67f-49c1-9193-bf6d999ee913" modifiedBy="a9c00f91-c0db-4696-b5c8-d454a0a09c6d" school="20ce8c22-f096-4877-9f6c-bcaa95f1d968">
+    <mode>Inline</mode>
+    <name>
+      <![CDATA[ 2.3 Drag on a Plate ]]>
+    </name>
+    <editing>useHTML</editing>
+    <privacy>10</privacy>
+    <allowRepublish>false</allowRepublish>
+    <attributeAuthor>true</attributeAuthor>
+    <modifiedIn>15.0</modifiedIn>
+    <difficulty>0.0</difficulty>
+    <text>
+                <![CDATA[ <link rel="stylesheet" href="/themes/b06b01fb-1810-4bde-bc67-60630d13a866">
+
+        <div class="wrapper">
+          <header>
+            <div style="width:100%" class="header-top">
+              <h1><span data-propname="number">2.3</span> <span data-propname="title">Drag on a Plate</span></h1>
+              <div class="icons">
+            <div class="icon guidance">Guidance</div>
+            <svg class="icon" id="difficulty-rating-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 32">
+                <text class="skill-text" x="26" y="23">Skill Level</text>
+                <text data-propname="icon_data.difficulty" style="visibility:hidden">2</text>
+                <polygon class="star active" points="11,6.74 7.9,16.24 16,10.4 6,10.4 14.1,16.24"></polygon>
+                <polygon class="star active" points="26,6.74 22.9,16.24 31,10.4 21,10.4 29.1,16.24"></polygon>
+                <polygon class="star" points="41,6.74 37.9,16.24 46,10.4 36,10.4 44.1,16.24"></polygon>
+            </svg>
+            <svg class="icon" id="par-time-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0.5 1 24.5 24">
+                <text data-propname="icon_data.par_time.1" style="visibility:hidden">15</text>
+                <text data-propname="icon_data.par_time.2" style="visibility:hidden">20</text>
+                <circle class="clock" id="clock-circle" cx="13" cy="13" r="10"></circle>
+                <path class="tick" d="M 13, 5.5 L 13, 5"></path>
+                <path class="tick" d="M 16.75, 6.505 L 17, 6.072"></path>
+                <path class="tick" d="M 19.495, 9.25 L 19.928, 9"></path>
+                <path class="tick" d="M 20.5, 13 L 21, 13"></path>
+                <path class="tick" d="M 19.495, 16.75 L 19.928, 17"></path>
+                <path class="tick" d="M 16.75, 19.495 L 17, 19.928"></path>
+                <path class="tick" d="M 13, 20.5 L 13, 21"></path>
+                <path class="tick" d="M 9.25, 19.495 L 9, 19.928"></path>
+                <path class="tick" d="M 6.505, 16.75 L 6.072, 17"></path>
+                <path class="tick" d="M 5.5, 13 L 5, 13"></path>
+                <path class="tick" d="M 6.505, 9.25 L 6.072, 9"></path>
+                <path class="tick" d="M 9.25, 6.505 L 9, 6.072"></path>
+                <text class="number" x="13" y="11.5">15-20</text>
+                <text class="mins" x="13" y="15.5">mins</text>
+                <path class="clock lb" d="M 13,3 a 10,10 90 0,1 10.0,9.999999999999996"></path>
+                <path class="clock ub" d="M 13,3 a 10,10 90 0,1 8.660254037844389,14.999999999999998"></path>
+            </svg>
+            <div class="icon blurb" data-propname="icon_data.statement">This question requires only ME1 knowledge, and is a chance to refresh the technique of using control volumes. We will use this technique extensively throughout the year.</div>
+        </div>
+        <style>
+            .icons {
+                background-color: #F5B041;
+                grid-template-areas: 
+                    "guidance rating  par-time"
+                    "blurb    blurb   blurb";
+                border-radius: 1rem 3rem 1rem 1rem;
+            }
+
+            .icons:not(:hover) #difficulty-rating-svg text {
+                fill: #F5B041;
+            }
+
+            .icons:not(:hover) #par-time-svg text {
+                fill: #F5B041;
+            }
+
+            .icons:not(:hover) #difficulty-rating-svg .star {
+                fill: #F5B041;
+            }
+
+            .icons:not(:hover) #par-time-svg .clock {
+                stroke: #F5B041;
+            }
+            
+            .icons:not(:hover) #par-time-svg .tick {
+                stroke: #F5B041;
+            }
+        </style>
+
+            </div>
+
+            <p class="master-statement" data-propname="master_statement">A fluid with density \(\mathrm{\rho = 800\,kgm^{-3}}\), flows at \(\mathrm{U_0 = 3\,ms^{-1}}\) over a flat plate of unit length and width. At the trailing edge the boundary-layer thickness is \(\mathrm{\delta = 25\,mm}\). Assume the velocity at the trailing edge to be linear (as shown in Fig. 1), and the flow to be two-dimensional.</p>
+
+            <div class="media-container" data-propname="media">
+          <img alt="Drag on a Plate Image" src="__BASE_URI__Experimental%20Sheet%20V2/Drag%20on%20a%20Plate%20Image.png">
+        </div>
+          </header>
+
+          <ul class="tabs-container">
+            <li class="tab active" id="tab1" style="max-width: 15rem;">
+              <p>(a)</p>
+            </li>
+            <li class="tab" id="tab2" style="max-width: 15rem;">
+              <p>(b)</p>
+            </li>
+          </ul>
+
+
+          <div class="parts-container">
+            <div class="part active" id="part1">
+              <p data-propname="parts.1.statement">Compute the mass flow rate across the top surface of the control volume (noted 'ab' in the image).</p>
+
+
+              <div class="response-wrapper" data-propname="parts.1.response">
+                <1>
+              </div>
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn1">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn1">
+                  Worked Solutions
+                </li>
+                <li class="structured-tutorial-button btn btn-default" id="st-btn1">
+                  Structured Tutorial
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws1">
+                  
+        <div class="worked-solutions-step active">
+          <div class="media-container" data-propname="parts.1.worked_solutions.1.media">
+          <img alt="A4-Q3a" src="__BASE_URI__Experimental%20Sheet%20V2/A4-Q3a.jpg" class="a4-media">
+        </div>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav1">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up1">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down1">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all1">Show All</div>
+        </div>
+        <div class="worked-solutions-step second last">
+          <p data-propname="parts.1.worked_solutions.2.is_final_answer">
+            <p>30 kg/s</p>
+          </p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa1">
+                  <p data-propname="parts.1.final_answer.text">30 kg/s</p>
+                </div>
+
+                <div class="structured-tutorial" id="st1" data-propname="parts.1.structured_tutorial">
+                  <iframe src='https://h5p.org/h5p/embed/981688' width='1090' height='713' frameborder='0' allowfullscreen='allowfullscreen'></iframe>
+                  <script src='https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js' charset='UTF-8'></script>
+                </div>
+              </div>
+
+            </div>
+            <div class="part" id="part2">
+              <p data-propname="parts.2.statement">Determine the drag force on the plate.</p>
+
+
+              <div class="response-wrapper" data-propname="parts.2.response">
+                <2>
+              </div>
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn2">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn2">
+                  Worked Solutions
+                </li>
+                <li class="structured-tutorial-button btn btn-default" id="st-btn2">
+                  Structured Tutorial
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws2">
+                  
+        <div class="worked-solutions-step active">
+          <div class="media-container" data-propname="parts.2.worked_solutions.1.media">
+          <img alt="A4-Q3b" src="__BASE_URI__Experimental%20Sheet%20V2/A4-Q3b.jpg" class="a4-media">
+        </div>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav2">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up2">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down2">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all2">Show All</div>
+        </div>
+        <div class="worked-solutions-step second last">
+          <p data-propname="parts.2.worked_solutions.2.is_final_answer">
+            <p>30 N</p>
+          </p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa2">
+                  <p data-propname="parts.2.final_answer.text">30 N</p>
+                </div>
+
+                <div class="structured-tutorial" id="st2" data-propname="parts.2.structured_tutorial">
+                  <iframe src='https://h5p.org/h5p/embed/981670' width='1090' height='713' frameborder='0' allowfullscreen='allowfullscreen'></iframe>
+                  <script src='https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js' charset='UTF-8'></script>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <hr id="question-feedback-separator">
+
+        <div id="comments-bar-container">
+            <div class="bar">
+                <div id="comment-btn" class="title">
+                    <div>Comments</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/web/Pjohnso000/Public_Html/Scripts/QuestionJavaScript.txt" type="application/javascript">
+          /* Import Custom Javascript Code from the server */
+        </script> ]]>
+    </text>
+    <weighting>1,1</weighting>
+    <numbering>alpha</numbering>
+
+    <parts>
+        <part>
+              <mode><![CDATA[ Numeric ]]></mode>
+              <showUnits>True</showUnits>
+              <grading><![CDATA[ toler_abs ]]></grading>
+              <err>0.1</err>
+              <answer><num>30</num><units><![CDATA[ kg/s ]]></units></answer>
+              <comment><![CDATA[  ]]></comment>
+              <name><![CDATA[ responseNan ]]></name>
+              <negStyle><![CDATA[ minus ]]></negStyle>
+              <numStyle><![CDATA[ thousands scientific ]]></numStyle>
+              <weighting>1</weighting>
+        </part>
+        <part>
+              <mode><![CDATA[ Numeric ]]></mode>
+              <showUnits>True</showUnits>
+              <answer><num>30</num><units><![CDATA[ N ]]></units></answer>
+              <comment><![CDATA[  ]]></comment>
+              <name><![CDATA[ responseNan ]]></name>
+              <negStyle><![CDATA[ minus ]]></negStyle>
+              <numStyle><![CDATA[ thousands scientific ]]></numStyle>
+              <grading><![CDATA[ exact_value ]]></grading>
+              <weighting>1</weighting>
+        </part>
+    </parts>
+  </question>
+
+        <question uid="fb4a9a76-cf70-4f18-90f0-8e1df4d6af20" modifiedBy="a9c00f91-c0db-4696-b5c8-d454a0a09c6d" school="20ce8c22-f096-4877-9f6c-bcaa95f1d968">
+    <mode>Inline</mode>
+    <name>
+      <![CDATA[ 2.4 Small gravitational waves in shallow waters ]]>
+    </name>
+    <editing>useHTML</editing>
+    <privacy>10</privacy>
+    <allowRepublish>false</allowRepublish>
+    <attributeAuthor>true</attributeAuthor>
+    <modifiedIn>15.0</modifiedIn>
+    <difficulty>0.0</difficulty>
+    <text>
+                <![CDATA[ <link rel="stylesheet" href="/themes/b06b01fb-1810-4bde-bc67-60630d13a866">
+
+        <div class="wrapper">
+          <header>
+            <div style="width:100%" class="header-top">
+              <h1><span data-propname="number">2.4</span> <span data-propname="title">Small gravitational waves in shallow waters</span></h1>
+              <div class="icons">
+            <div class="icon guidance">Guidance</div>
+            <svg class="icon" id="difficulty-rating-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 32">
+                <text class="skill-text" x="26" y="23">Skill Level</text>
+                <text data-propname="icon_data.difficulty" style="visibility:hidden">3</text>
+                <polygon class="star active" points="11,6.74 7.9,16.24 16,10.4 6,10.4 14.1,16.24"></polygon>
+                <polygon class="star active" points="26,6.74 22.9,16.24 31,10.4 21,10.4 29.1,16.24"></polygon>
+                <polygon class="star active" points="41,6.74 37.9,16.24 46,10.4 36,10.4 44.1,16.24"></polygon>
+            </svg>
+            <svg class="icon" id="par-time-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0.5 1 24.5 24">
+                <text data-propname="icon_data.par_time.1" style="visibility:hidden">30</text>
+                <text data-propname="icon_data.par_time.2" style="visibility:hidden">45</text>
+                <circle class="clock" id="clock-circle" cx="13" cy="13" r="10"></circle>
+                <path class="tick" d="M 13, 5.5 L 13, 5"></path>
+                <path class="tick" d="M 16.75, 6.505 L 17, 6.072"></path>
+                <path class="tick" d="M 19.495, 9.25 L 19.928, 9"></path>
+                <path class="tick" d="M 20.5, 13 L 21, 13"></path>
+                <path class="tick" d="M 19.495, 16.75 L 19.928, 17"></path>
+                <path class="tick" d="M 16.75, 19.495 L 17, 19.928"></path>
+                <path class="tick" d="M 13, 20.5 L 13, 21"></path>
+                <path class="tick" d="M 9.25, 19.495 L 9, 19.928"></path>
+                <path class="tick" d="M 6.505, 16.75 L 6.072, 17"></path>
+                <path class="tick" d="M 5.5, 13 L 5, 13"></path>
+                <path class="tick" d="M 6.505, 9.25 L 6.072, 9"></path>
+                <path class="tick" d="M 9.25, 6.505 L 9, 6.072"></path>
+                <text class="number" x="13" y="11.5">30-45</text>
+                <text class="mins" x="13" y="15.5">mins</text>
+                <path class="clock lb" d="M 13,3 a 10,10 90 1,1 5.665538897647979e-15,20.0"></path>
+                <path class="clock ub" d="M 13,3 a 10,10 90 1,1 -10.0,10.000000000000002"></path>
+            </svg>
+            <div class="icon blurb" data-propname="icon_data.statement">This question cultivates an analytical approach to problems. The separate parts provide adequate structure for the student to progress through the question, but the new type of analysis that is required is challenging for some students. The question relates to our life experience in the final parts, by quantifying the speed of a truck based purely on a photo. The more subtle part of this question is the relation between shallow water waves and compression waves. If you can see this analogy then you are starting to master your art!</div>
+        </div>
+        <style>
+            .icons {
+                background-color: #EF5350;
+                grid-template-areas: 
+                    "guidance rating  par-time"
+                    "blurb    blurb   blurb";
+                border-radius: 1rem 3rem 1rem 1rem;
+            }
+
+            .icons:not(:hover) #difficulty-rating-svg text {
+                fill: #EF5350;
+            }
+
+            .icons:not(:hover) #par-time-svg text {
+                fill: #EF5350;
+            }
+
+            .icons:not(:hover) #difficulty-rating-svg .star {
+                fill: #EF5350;
+            }
+
+            .icons:not(:hover) #par-time-svg .clock {
+                stroke: #EF5350;
+            }
+            
+            .icons:not(:hover) #par-time-svg .tick {
+                stroke: #EF5350;
+            }
+        </style>
+
+            </div>
+
+            <p class="master-statement" data-propname="master_statement">Consider a long, horizontal, shallow, open channel containing a stationary liquid. A small disturbance is initiated at one end of the channel and raises the water level by a small amount (\(\mathrm{d}h\)). The disturbance moves with constant velocity \(c\)</p>
+
+            <div class="media-container" data-propname="media">
+          <img alt="Gravitational Waves Diagram" src="__BASE_URI__Experimental%20Sheet%20V2/Gravitational%20Waves%20Diagram.jpg">
+        </div>
+          </header>
+
+          <ul class="tabs-container">
+            <li class="tab active" id="tab1" style="">
+              <p>(a)</p>
+            </li>
+            <li class="tab" id="tab2" style="">
+              <p>(b)</p>
+            </li>
+            <li class="tab" id="tab3" style="">
+              <p>(c)</p>
+            </li>
+            <li class="tab" id="tab4" style="">
+              <p>(d)</p>
+            </li>
+            <li class="tab" id="tab5" style="">
+              <p>(e)</p>
+            </li>
+            <li class="tab" id="tab6" style="">
+              <p>(f)</p>
+            </li>
+            <li class="tab" id="tab7" style="">
+              <p>(g)</p>
+            </li>
+            <li class="tab" id="tab8" style="">
+              <p>(h)</p>
+            </li>
+          </ul>
+
+
+          <div class="parts-container">
+            <div class="part active" id="part1">
+              <p data-propname="parts.1.statement">Define a control volume in the reference frame moving with the compression front. Apply mass conservation and show that \(h\mathrm{d}u = c\mathrm{d}h - \mathrm{d}h\mathrm{d}u\).</p>
+
+
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="worked-solutions-button btn btn-default" id="ws-btn1">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws1">
+                  
+        <div class="worked-solutions-step active">
+          <p data-propname="parts.1.worked_solutions.1.text">Let us apply the mass-conservation principle to the control volume attached to the moving front (see sketch below). Note that what we&#39;ve chosen is a control volume and not a material volume, meaning that by it&#39;s definition, we should be using the boundary velocity (i.e. the velocity of the control volume) and not the velocity of the fluid. However, if we assume that our chosen control volume is a&nbsp;<em>material </em>control volume which happens to perfectly coincide with the fixed control volume at&nbsp;\( t=t_{\small 0} \), then we may use the velocity of the fluid, and not that of the boundary.</p>
+          <div class="media-container" data-propname="parts.1.worked_solutions.1.media">
+          <img alt="7_7" src="__BASE_URI__Experimental%20Sheet%20V2/7_7.png">
+        </div>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav1">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up1">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down1">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all1">Show All</div>
+        </div>
+        <div class="worked-solutions-step second">
+          <p data-propname="parts.1.worked_solutions.2.text">If we consider the control volume as a moving reference, i.e. subtract&nbsp;\( c \)&nbsp;from all sides, then we are left with the velocities in the above sketch.</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.1.worked_solutions.3.text">We can now apply the Reynolds transport theorem:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.1.worked_solutions.4.equation">\( \Large{\int}_{\small \mathrm{cv}}\normalsize{\frac{\partial \rho}{\partial t}\mathrm{d}V} +\Large{\oint}_{\small \mathrm{cs}}\normalsize{\rho\left(\vec{u}\cdot\vec{n}\right)\space\mathrm{d}A} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.1.worked_solutions.5.text">The fluid&#39;s density is assumed to be constant (fair assumption for water at same temperature with no salinity). The above equation then simplifies to:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.1.worked_solutions.6.equation">\( 0=\Large{\oint}_{\small \mathrm{cs}}\normalsize{\vec{u}\cdot\vec{n}\space \mathrm{d}A} = \Large{\int}_{\small{\enclose{circle}{1}}}\normalsize{\vec{u}\cdot\vec{n}\space\mathrm{d}A} +\Large{\int}_{\small{\enclose{circle}{2}}}\normalsize{\vec{u}\cdot\vec{n}\space\mathrm{d}A} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.1.worked_solutions.7.text">where we used the fact that&nbsp;\( \vec{u}\cdot\vec{n} =0\)&nbsp;for both the top \( \enclose{circle}{3} \)and bottom \( \enclose{circle}{4} \)&nbsp;surfaces. Hence:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.1.worked_solutions.8.equation">\( 0=\Large{\int}_{\small \enclose{circle}{1}}\normalsize{ \begin{bmatrix} -c \\ ? \\ 0 \end{bmatrix}\cdot \begin{bmatrix} 1\\0\\0 \end{bmatrix} }\mathrm{d}A + \Large{\int}_{\small \enclose{circle}{2}}\normalsize{ \begin{bmatrix} \mathrm{d}u-c\\?\\0 \end{bmatrix}\cdot \begin{bmatrix} -1\\0\\0 \end{bmatrix}\mathrm{d}A= -W\Large{\int}_{\small y=0}^{\small h}\normalsize{c\space\mathrm{d}y} } -W\Large{\int}_{\small y=0}^{\small h+\mathrm{d}h}\normalsize{(\mathrm{d}u-c)\space \mathrm{d}y} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.1.worked_solutions.9.text">where&nbsp;\( W \)&nbsp;is the width of the control volume. Dividing by&nbsp;\( W \)&nbsp;and noting that neither&nbsp;\( c \)&nbsp;nor&nbsp;\( \mathrm{d}u \)&nbsp;are taken to be functions of&nbsp;\( y \)&nbsp;we find:</p>
+        </div>
+        <div class="worked-solutions-step last">
+          <p class="ws-eq" data-propname="parts.1.worked_solutions.10.equation">\( 0=-ch-(h+\mathrm{d}h)(\mathrm{d}u-c)\longrightarrow ch=-h\space \mathrm{d}u+ch-\mathrm{d}h\space\mathrm{d}u+c\space \mathrm{d}h \longrightarrow h\space \mathrm{d}u=c\space \mathrm{d}h-\mathrm{d}h\space\mathrm{d}u \)</p>
+        </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="part" id="part2">
+              <p data-propname="parts.2.statement">Assuming that \(\varepsilon\equiv\mathrm{d} h / h \ll 1\), show that \(c\,\mathrm{d}h = h\,\mathrm{d} u + \mathcal{O}(c h \varepsilon^2)\)</p>
+
+
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="worked-solutions-button btn btn-default" id="ws-btn2">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws2">
+                  
+        <div class="worked-solutions-step active">
+          <p data-propname="parts.2.worked_solutions.1.text">From&nbsp;\( h\space \mathrm{d}u=c\space \mathrm{d}h-\mathrm{d}h\space\mathrm{d}u \), we can divide by&nbsp;\(ch\)&nbsp;to arrive at the following:</p>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav2">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up2">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down2">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all2">Show All</div>
+        </div>
+        <div class="worked-solutions-step second">
+          <p class="ws-eq" data-propname="parts.2.worked_solutions.2.equation">\( \frac{\mathrm{d}u}{c}=\frac{\mathrm{d}h}{h}-\frac{\mathrm{d}h}{h}\frac{\mathrm{d}u}{c} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.2.worked_solutions.3.text">From the question description, we know that&nbsp;\( \varepsilon \equiv \mathrm{d}h/h \ll1 \), so we can therefore say that:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.2.worked_solutions.4.text">\(\varepsilon \sim \frac{\mathrm{d}h}{h}\)&nbsp;(i.e. the two terms are of the same order).</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.2.worked_solutions.5.text">Likewise, since we known that&nbsp;\( \mathrm{d}u \)&nbsp;is much smaller than&nbsp;\(c\)&nbsp;(because it&#39;s a small disturbance), we can say the following: \(\mathrm{d}u\ll c \longrightarrow \frac{\mathrm{d}u}{c}\ll 1 \space\space\space\therefore \space \space \frac{\mathrm{d}u}{c}\sim \varepsilon \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.2.worked_solutions.6.text">Now that we know both terms are of order&nbsp;\( \varepsilon \), we can use order of magnitude analysis to simplify the above equation:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.2.worked_solutions.7.equation">\( \underset{\mathcal{O}(\varepsilon)}{\frac{\mathrm{d}u}{c}}=\underset{\mathcal{O}(\varepsilon)}{\frac{\mathrm{d}h}{h}}-\underset{\mathcal{O}(\varepsilon)}{\frac{\mathrm{d}h}{h}}\underset{\mathcal{O}(\varepsilon)}{\frac{\mathrm{d}u}{c}} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.2.worked_solutions.8.text">Therefore:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.2.worked_solutions.9.equation">\( \underset{\mathcal{O}(\varepsilon)}{\frac{\mathrm{d}u}{c}}=\underset{\mathcal{O}(\varepsilon)}{\frac{\mathrm{d}h}{h}}-\underset{\mathcal{O}(\varepsilon^2)}{\frac{\mathrm{d}h}{h}{\frac{\mathrm{d}u}{c}}} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.2.worked_solutions.10.text">To the first order in \( \varepsilon \ll 1 \) we find that:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.2.worked_solutions.11.equation">\( {\frac{\mathrm{d}u}{c}}={\frac{\mathrm{d}h}{h}}-\mathcal{O}(\varepsilon^2)\)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.2.worked_solutions.12.text">Multiplying by&nbsp;\(ch\), we get:</p>
+        </div>
+        <div class="worked-solutions-step last">
+          <p class="ws-eq" data-propname="parts.2.worked_solutions.13.equation">\( c\,\mathrm{d}h = h\,\mathrm{d}u + \mathcal{O}(ch\varepsilon^2)\)</p>
+        </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="part" id="part3">
+              <p data-propname="parts.3.statement">Apply Bernoulli's equation along the water surface (which is a streamline at constant pressure) to find that \(g\,\mathrm{d} h = c\,\mathrm{d} u + \mathcal{O}(c^2\varepsilon^2)\).</p>
+
+
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="worked-solutions-button btn btn-default" id="ws-btn3">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws3">
+                  
+        <div class="worked-solutions-step active">
+          <p data-propname="parts.3.worked_solutions.1.text">The free surface is a streamline. The flow being considered steady and the fluid being assumed inviscid with constant density, we apply Bernoulli&rsquo;s equation along&nbsp;\( \enclose{circle}{3} \):</p>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav3">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up3">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down3">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all3">Show All</div>
+        </div>
+        <div class="worked-solutions-step second">
+          <p class="ws-eq" data-propname="parts.3.worked_solutions.2.equation">\( p+\frac{1}{2}\rho U^2+\rho gz=C \longrightarrow \begin{cases} \mathrm{at}\space \enclose{circle}{3}\cap\enclose{circle}{1} &amp; p_{at} &amp;+&amp; \rho c^2/2 &amp; +&amp;\rho gh &amp;= &amp;C \\ \mathrm{at}\space \enclose{circle}{3}\cap\enclose{circle}{2} &amp; p_{at} &amp;+&amp; \rho (\mathrm{d}u-c)^2/2 &amp; +&amp;\rho g(h+\mathrm{d}h) &amp;= &amp;C \end{cases} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.3.worked_solutions.3.text">Subtracting the first line from the second one in the above system gives:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.3.worked_solutions.4.equation">\( \frac{1}{2}\rho \mathrm{d}u^2-\rho c \mathrm{d}u+\rho g\mathrm{d}h=0 \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.3.worked_solutions.5.text">Diving by&nbsp;\( \rho c^2 \)&nbsp;and considering the orders of the terms:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.3.worked_solutions.6.equation">\( \underbrace{ \frac{1}{2}\left ( \frac{\mathrm{d}u}{c} \right)^2}_{\mathcal{O}(\varepsilon^2)} -\underbrace{ \frac{\mathrm{d}u}{c} }_{\mathcal{O}(\varepsilon)} +\underbrace{ \frac{g}{c^2}\mathrm{d}h }_{\mathcal{O}(\varepsilon)} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.3.worked_solutions.7.text">Therefore, to the first order of&nbsp;\( \varepsilon \):</p>
+        </div>
+        <div class="worked-solutions-step last">
+          <p class="ws-eq" data-propname="parts.3.worked_solutions.8.equation">\( g\mathrm{d}h=c\space \mathrm{d}h+\mathcal{O(c^2\varepsilon^2)}\)</p>
+        </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="part" id="part4">
+              <p data-propname="parts.4.statement">Find an expression for \(c\).</p>
+
+
+              <div class="response-wrapper" data-propname="parts.4.response">
+                <div class="pre-response-text">
+                  <p data-propname="parts.4.pre_response_text">\( c = \)</p>
+                </div>
+                <1>
+                <div id="maple-help">
+            <svg id="maple-help-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                <circle cx="13" cy="13" r="10"></circle>
+                <text x="13" y="13">?</text>
+            </svg>
+            <div class="overlay">
+                <div class="text-wrapper">
+                    <div class="header">
+                        <h2>How to input equations</h2>
+                        <svg id="maple-help-exit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                            <circle cx="13" cy="13" r="10"></circle>
+                            <path class="cross" x="13" y="13" d="M 5.92,5.92 L 20.07,20.07"></path>
+                            <path class="cross" x="13" y="13" d="M 20.07,5.92 L 5.92,20.07"></path>
+                        </svg>
+                    </div>
+                    <div class="body">
+                        <p>The equation questions use Maple syntax to evaluate formulas. This is different from LaTeX in a couple of ways:</p>
+                        <p>Like in Python, adding, subtracting, multiplying and dividing can be done using the symbols <span class="code">+</span> <span class="code">-</span> <span class="code">*</span> <span class="code">/</span>.</p>
+                        <p>Remember to use an asterisk for multiplication, otherwise Maple will interpret it as one big variable!</p>
+                        <p>For Greek letters, type the full name of the letter (e.g. 'mu' will render \( \mu \). unlike LaTeX, there is no need for slashes).</p>
+                        <p>Click the omega Ω icon to preview your equation.</p>
+                        <p>For example, writing <span class="code">G*M*m/(r^2)</span> will produce:</p>
+                        <p class="latex">\( \frac{G M m}{r^2} \)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+              </div>
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn4">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn4">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws4">
+                  
+        <div class="worked-solutions-step active">
+          <p data-propname="parts.4.worked_solutions.1.text">From (a)&nbsp;\(\times c/h\), and (b):</p>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav4">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up4">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down4">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all4">Show All</div>
+        </div>
+        <div class="worked-solutions-step second last">
+          <p data-propname="parts.4.worked_solutions.2.text">\( \begin{cases} c\&gt;\mathrm{d}u &amp;=&amp; \left(c^2/h\right )\mathrm{d}h &amp;+ &amp; \mathcal{O\left (c^2\varepsilon^2\right)} \\ g\&gt;\mathrm{d}h &amp;=&amp; \space\space \space\space\space\space c\&gt;\mathrm{d}h &amp;+ &amp; \mathcal{O\left (c^2\varepsilon^2\right)} \end{cases} \longrightarrow \space c^2=gh \longrightarrow \) therefore:</p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa4">
+                  <p data-propname="parts.4.final_answer.text">\(\boxed{c=\sqrt{gh}\space}\)</p>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="part" id="part5">
+              <p data-propname="parts.5.statement">A truck travels through shallow water at some speed \(U\). The ratio of \(U\) with \(c\) is known as the Froude number (noted \(\mathrm{Fr}\)) <br> Sketch the wave pattern for \(\mathrm{Fr} > 1\). Show that a Mach cone must form.</p>
+
+
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="worked-solutions-button btn btn-default" id="ws-btn5">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws5">
+                  
+        <div class="worked-solutions-step active last">
+          <p data-propname="parts.5.worked_solutions.1.text">The wave pattern for \( \mathrm{Fr}&gt;1 \) is:</p>
+          <div class="media-container" data-propname="parts.5.worked_solutions.1.media">
+          <img alt="18_3_fig4" src="__BASE_URI__Experimental%20Sheet%20V2/18_3_fig4.png">
+        </div>
+        </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="part" id="part6">
+              <p data-propname="parts.6.statement">A truck travels through shallow water at some speed \(U\). The ratio of \(U\) with \(c\) is known as the Froude number (noted \(\mathrm{Fr}\)) <br> Find a relationship between the Froude number and the Mach cone angle.</p>
+
+
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn6">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn6">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws6">
+                  
+        <div class="worked-solutions-step active last">
+          <p data-propname="parts.6.worked_solutions.1.text">Based on the sketch above,&nbsp;\( \sin(\theta)=c\tau/U\tau=c/U=1/\mathrm{Fr} \)</p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa6">
+                  <p data-propname="parts.6.final_answer.text">\( \boxed{\theta=\sin^{-1}\left(\frac{1}{\mathrm{Fr}}\right)} \)</p>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="part" id="part7">
+              <p data-propname="parts.7.statement">A truck travels through shallow water at some speed \(U\). The ratio of \(U\) with \(c\) is known as the Froude number (noted \(\mathrm{Fr}\)) <br> Estimate the speed of the truck in the picture below (state your assumptions).</p>
+
+              <div class="media-container" data-propname="parts.7.media">
+          <img alt="Truck" src="__BASE_URI__Experimental%20Sheet%20V2/Truck.jpg">
+        </div>
+
+              <div class="response-wrapper" data-propname="parts.7.response">
+                <2>
+              </div>
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="final-answer-button btn btn-default" id="fa-btn7">
+                  Show Answer
+                </li>
+                <li class="worked-solutions-button btn btn-default" id="ws-btn7">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws7">
+                  
+        <div class="worked-solutions-step active">
+          <div class="media-container" data-propname="parts.7.worked_solutions.1.media">
+          <img alt="small_18_3_fig5" src="__BASE_URI__Experimental%20Sheet%20V2/small_18_3_fig5.png">
+        </div>
+        </div>
+        <div class="worked-solutions-nav" id="ws-nav7">
+          <div class="btn btn-default disabled ws-step-up" id="ws-step-up7">⬆ Previous Step ⬆</div>
+          <div class="btn btn-default ws-step-down" id="ws-step-down7">⬇ Next Step ⬇</div>
+          <div class="btn btn-default ws-reveal-all" id="ws-reveal-all7">Show All</div>
+        </div>
+        <div class="worked-solutions-step second">
+          <p data-propname="parts.7.worked_solutions.2.text">Reading from the picture:</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p class="ws-eq" data-propname="parts.7.worked_solutions.3.equation">\( \tan(\theta)\approx\frac{7.5}{18}\longrightarrow \theta \approx 23^{\circ} \)</p>
+        </div>
+        <div class="worked-solutions-step">
+          <p data-propname="parts.7.worked_solutions.4.text">The Froude number is&nbsp;\( \mathrm{Fr}=1/\sin(\theta) \approx 2.6 \). Assuming the water level to be around&nbsp;\( 30 \space \mathrm{cm} \)&nbsp;and taking&nbsp;\( g=9.8 \space \mathrm{m/s^2} \)&nbsp;we have:</p>
+        </div>
+        <div class="worked-solutions-step last">
+          <p class="ws-eq" data-propname="parts.7.worked_solutions.5.equation">\( U=c\mathrm{Fr}=\mathrm{Fr}\sqrt{gh}\)</p>
+        </div>
+
+                </div>
+
+                <hr>
+                <div class="final-answer" id="fa7">
+                  <p data-propname="parts.7.final_answer.text">\(U\approx \boxed{16 \space \mathrm{km/h}}\)</p>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="part" id="part8">
+              <p data-propname="parts.8.statement">A truck travels through shallow water at some speed \(U\). The ratio of \(U\) with \(c\) is known as the Froude number (noted \(\mathrm{Fr}\)) <br> Suppose that the bottom wall is slightly rising in the wave direction. Based on your analysis for the horizontal wall, explain why you expect the wave front to steepen. Relate this finding to your observation of breaking waves on the beach.</p>
+
+
+
+              <hr>
+
+              <ul class="answers-nav-container">
+                <li class="worked-solutions-button btn btn-default" id="ws-btn8">
+                  Worked Solutions
+                </li>
+              </ul>
+
+              <div class="answers-container">
+                <div class="worked-solutions" id="ws8">
+                  
+        <div class="worked-solutions-step active last">
+          <p data-propname="parts.8.worked_solutions.1.text">If the bottom wall is rising with&nbsp;\(x\), then&nbsp;\(h(x)\)&nbsp;is decreasing. Consequently,&nbsp;\( c=\sqrt{gh} \)&nbsp;would be reducing. This means that compression waves from downstream would be catching up with the ones further upstream (since they travel at reduced speeds). This in turn suggests that the compression waves &#39;accumulate&#39; as the water level decreases, contributing to the steepening of the compression front which eventually forms a breaking wave.</p>
+        </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <hr id="question-feedback-separator">
+
+        <div id="comments-bar-container">
+            <div class="bar">
+                <div id="comment-btn" class="title">
+                    <div>Comments</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/web/Pjohnso000/Public_Html/Scripts/QuestionJavaScript.txt" type="application/javascript">
+          /* Import Custom Javascript Code from the server */
+        </script> ]]>
+    </text>
+    <weighting>1,1</weighting>
+    <numbering>alpha</numbering>
+
+    <parts>
+        <part>
+              <mode><![CDATA[ Maple ]]></mode>
+              <mapleAnswer><![CDATA[ sqrt(g*h) ]]></mapleAnswer>
+              <name><![CDATA[ responseNan ]]></name>
+              <type><![CDATA[ maple ]]></type>
+              <plot><![CDATA[  ]]></plot>
+              <allow2d>0</allow2d>
+              <mathConversionMode>0</mathConversionMode>
+              <maple><![CDATA[ evalb(($ANSWER)-($RESPONSE)=0); ]]></maple>
+              <weighting>1</weighting>
+              <comment><![CDATA[  ]]></comment>
+              <custompreview><![CDATA[  ]]></custompreview>
+        </part>
+        <part>
+              <mode><![CDATA[ Numeric ]]></mode>
+              <showUnits>True</showUnits>
+              <grading><![CDATA[ toler_abs ]]></grading>
+              <err>0.01</err>
+              <answer><num>16</num><units><![CDATA[ km/h ]]></units></answer>
+              <name><![CDATA[ responseNan ]]></name>
+              <negStyle><![CDATA[ minus ]]></negStyle>
+              <numStyle><![CDATA[ thousands scientific ]]></numStyle>
+              <weighting>1</weighting>
+              <comment><![CDATA[  ]]></comment>
+        </part>
+    </parts>
+  </question>
+
+  </questions>
+
+  <webResources>
+    <folder id="0">
+      <name>
+        <![CDATA[  web_folders  ]]>
+      </name>
+      <description>
+        <![CDATA[    ]]>
+      </description>
+      <uri>
+        <![CDATA[  web_folders  ]]>
+      </uri>
+    </folder>
+  </webResources>
+
+</courseModule>

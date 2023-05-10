@@ -1,0 +1,69 @@
+{% macro questionIcons(data, propname) %}
+<div class="icons">
+    <div class="icons-flexbox">
+        <svg class="icon" id="difficulty-rating-svg" xmlns="http://www.w3.org/2000/svg" viewBox="5 5 42 22">
+            <text class="skill-text" x="26" y="23">Skill Level</text>
+            <!-- CHANGE DIFFICULTY LEVEL BELOW. THESE CHANGES WILL BE REFLECTED IN THE NEXT RENDER -->
+            <text data-propname="{{ propname }}.difficulty" style="visibility:hidden">{{ data.difficulty }}</text>
+            <polygon class="star {{ 'active' if data.difficulty > 0 }}" points="11,10.74 7.9,20.24 16,14.4 6,14.4 14.1,20.24"></polygon>
+            <polygon class="star {{ 'active' if data.difficulty > 1 }}" points="26,10.74 22.9,20.24 31,14.4 21,14.4 29.1,20.24"></polygon>
+            <polygon class="star {{ 'active' if data.difficulty > 2 }}" points="41,10.74 37.9,20.24 46,14.4 36,14.4 44.1,20.24"></polygon>
+        </svg>
+        <svg class="icon" id="par-time-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0.5 1 24.5 24">
+            <!-- CHANGE PAR TIMES BELOW. THESE CHANGES WILL BE REFLECTED IN THE NEXT RENDER -->
+            <text data-propname="{{ propname }}.par_time" style="visibility:hidden">{{ data.par_time|tojson }}</text>
+            <circle class="clock" id="clock-circle" cx="13" cy="13" r="10"></circle>
+            <path class="clock lb" d="{{ arc(data.par_time[0], 10, 13, 13) }}"></path>
+            <path class="clock ub" d="{{ arc(data.par_time[1], 10, 13, 13) }}"></path>
+            <!-- DON'T CHANGE THE PAR TIMES BELOW. USE THE LIST FOUR LINES ABOVE -->
+            <text class="number" x="13" y="13">{{ data.par_time[0] }}-{{ data.par_time[1] }}</text>
+            <text class="mins" x="13" y="15.5">mins</text>
+            {% for mins in range(0, 60, 5) %}
+            <path class="tick" d="{{ ticks(mins, 7.5, 8, 13, 13) }}"></path>
+            {% endfor %}
+        </svg>
+    </div>
+    {% if data.statement %}
+    <div class="icons-info">
+        <div class="icon guidance">Guidance</div>
+        <div class="icon icon-space"></div>
+        <div class="icon blurb" data-propname="{{ propname }}.statement">
+            <!-- CHANGE ICON STATEMENT HERE -->
+            {{ data.statement }}
+        </div>
+    </div>
+    {% endif %}
+</div>
+<style>
+    {% if data.statement %}
+    .icons-info {
+        grid-template-areas: 
+            "icon_space"
+            "guidance"
+            "blurb";
+        border-radius: 1rem 4rem 1rem 1rem;
+        background-color: #007393;
+    }
+    {% else %}
+    .icons:hover {
+        max-width: 18rem;
+    }
+    {% endif %}
+    
+    .icons{{ ":not(:hover)" if data.statement }} text {
+        fill: #007393;
+    }
+
+    .icons{{ ":not(:hover)" if data.statement }} #difficulty-rating-svg .star {
+        fill: #007393;
+    }
+
+    .icons{{ ":not(:hover)" if data.statement }} #par-time-svg .clock {
+        stroke: #007393;
+    }
+    
+    .icons{{ ":not(:hover)" if data.statement }} #par-time-svg .tick {
+        stroke: #007393;
+    }
+</style>
+{% endmacro %}

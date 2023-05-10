@@ -1,0 +1,216 @@
+{
+   "title": "Small gravitational waves in shallow waters",
+   "icon_data": {
+      "difficulty": 3,
+      "par_time": [
+         30,
+         45
+      ],
+      "statement": "This question cultivates an analytical approach to problems. The separate parts provide adequate structure for the student to progress through the question, but the new type of analysis that is required is challenging for some students. The question relates to our life experience in the final parts, by quantifying the speed of a truck based purely on a photo. The more subtle part of this question is the relation between shallow water waves and compression waves. If you can see this analogy then you are starting to master your art!"
+   },
+   "master_statement": "Consider a long, horizontal, shallow, open channel containing a stationary liquid. A small disturbance is initiated at one end of the channel and raises the water level by a small amount (\\(\\mathrm{d}h\\)). The disturbance moves with constant velocity \\(c\\)",
+   "media": [
+      "Gravitational Waves Diagram.jpg"
+   ],
+   "parts": [
+      {
+         "statement": "Define a control volume in the reference frame moving with the compression front. Apply mass conservation and show that \\(h\\mathrm{d}u = c\\mathrm{d}h - \\mathrm{d}h\\mathrm{d}u\\).",
+         "worked_solutions": [
+            {
+               "text": "Let us apply the mass-conservation principle to the control volume attached to the moving front (see sketch below). Note that what we&#39;ve chosen is a control volume and not a material volume, meaning that by it&#39;s definition, we should be using the boundary velocity (i.e. the velocity of the control volume) and not the velocity of the fluid. However, if we assume that our chosen control volume is a&nbsp;<em>material </em>control volume which happens to perfectly coincide with the fixed control volume at&nbsp;\\( t=t_{\\small 0} \\), then we may use the velocity of the fluid, and not that of the boundary.",
+               "media": [
+                  "7_7.png"
+               ]
+            },
+            {
+               "text": "If we consider the control volume as a moving reference, i.e. subtract&nbsp;\\( c \\)&nbsp;from all sides, then we are left with the velocities in the above sketch."
+            },
+            {
+               "text": "We can now apply the Reynolds transport theorem:"
+            },
+            {
+               "equation": "\\( \\Large{\\int}_{\\small \\mathrm{cv}}\\normalsize{\\frac{\\partial \\rho}{\\partial t}\\mathrm{d}V} +\\Large{\\oint}_{\\small \\mathrm{cs}}\\normalsize{\\rho\\left(\\vec{u}\\cdot\\vec{n}\\right)\\space\\mathrm{d}A} \\)"
+            },
+            {
+               "text": "The fluid&#39;s density is assumed to be constant (fair assumption for water at same temperature with no salinity). The above equation then simplifies to:"
+            },
+            {
+               "equation": "\\( 0=\\Large{\\oint}_{\\small \\mathrm{cs}}\\normalsize{\\vec{u}\\cdot\\vec{n}\\space \\mathrm{d}A} = \\Large{\\int}_{\\small{\\enclose{circle}{1}}}\\normalsize{\\vec{u}\\cdot\\vec{n}\\space\\mathrm{d}A} +\\Large{\\int}_{\\small{\\enclose{circle}{2}}}\\normalsize{\\vec{u}\\cdot\\vec{n}\\space\\mathrm{d}A} \\)"
+            },
+            {
+               "text": "where we used the fact that&nbsp;\\( \\vec{u}\\cdot\\vec{n} =0\\)&nbsp;for both the top \\( \\enclose{circle}{3} \\)and bottom \\( \\enclose{circle}{4} \\)&nbsp;surfaces. Hence:"
+            },
+            {
+               "equation": "\\( 0=\\Large{\\int}_{\\small \\enclose{circle}{1}}\\normalsize{ \\begin{bmatrix} -c \\\\ ? \\\\ 0 \\end{bmatrix}\\cdot \\begin{bmatrix} 1\\\\0\\\\0 \\end{bmatrix} }\\mathrm{d}A + \\Large{\\int}_{\\small \\enclose{circle}{2}}\\normalsize{ \\begin{bmatrix} \\mathrm{d}u-c\\\\?\\\\0 \\end{bmatrix}\\cdot \\begin{bmatrix} -1\\\\0\\\\0 \\end{bmatrix}\\mathrm{d}A= -W\\Large{\\int}_{\\small y=0}^{\\small h}\\normalsize{c\\space\\mathrm{d}y} } -W\\Large{\\int}_{\\small y=0}^{\\small h+\\mathrm{d}h}\\normalsize{(\\mathrm{d}u-c)\\space \\mathrm{d}y} \\)"
+            },
+            {
+               "text": "where&nbsp;\\( W \\)&nbsp;is the width of the control volume. Dividing by&nbsp;\\( W \\)&nbsp;and noting that neither&nbsp;\\( c \\)&nbsp;nor&nbsp;\\( \\mathrm{d}u \\)&nbsp;are taken to be functions of&nbsp;\\( y \\)&nbsp;we find:"
+            },
+            {
+               "equation": "\\( 0=-ch-(h+\\mathrm{d}h)(\\mathrm{d}u-c)\\longrightarrow ch=-h\\space \\mathrm{d}u+ch-\\mathrm{d}h\\space\\mathrm{d}u+c\\space \\mathrm{d}h \\longrightarrow h\\space \\mathrm{d}u=c\\space \\mathrm{d}h-\\mathrm{d}h\\space\\mathrm{d}u \\)"
+            }
+         ]
+      },
+      {
+         "statement": "Assuming that \\(\\varepsilon\\equiv\\mathrm{d} h / h \\ll 1\\), show that \\(c\\,\\mathrm{d}h = h\\,\\mathrm{d} u + \\mathcal{O}(c h \\varepsilon^2)\\)",
+         "worked_solutions": [
+            {
+               "text": "From&nbsp;\\( h\\space \\mathrm{d}u=c\\space \\mathrm{d}h-\\mathrm{d}h\\space\\mathrm{d}u \\), we can divide by&nbsp;\\(ch\\)&nbsp;to arrive at the following:"
+            },
+            {
+               "equation": "\\( \\frac{\\mathrm{d}u}{c}=\\frac{\\mathrm{d}h}{h}-\\frac{\\mathrm{d}h}{h}\\frac{\\mathrm{d}u}{c} \\)"
+            },
+            {
+               "text": "From the question description, we know that&nbsp;\\( \\varepsilon \\equiv \\mathrm{d}h/h \\ll1 \\), so we can therefore say that:"
+            },
+            {
+               "text": "\\(\\varepsilon \\sim \\frac{\\mathrm{d}h}{h}\\)&nbsp;(i.e. the two terms are of the same order)."
+            },
+            {
+               "text": "Likewise, since we known that&nbsp;\\( \\mathrm{d}u \\)&nbsp;is much smaller than&nbsp;\\(c\\)&nbsp;(because it&#39;s a small disturbance), we can say the following: \\(\\mathrm{d}u\\ll c \\longrightarrow \\frac{\\mathrm{d}u}{c}\\ll 1 \\space\\space\\space\\therefore \\space \\space \\frac{\\mathrm{d}u}{c}\\sim \\varepsilon \\)"
+            },
+            {
+               "text": "Now that we know both terms are of order&nbsp;\\( \\varepsilon \\), we can use order of magnitude analysis to simplify the above equation:"
+            },
+            {
+               "equation": "\\( \\underset{\\mathcal{O}(\\varepsilon)}{\\frac{\\mathrm{d}u}{c}}=\\underset{\\mathcal{O}(\\varepsilon)}{\\frac{\\mathrm{d}h}{h}}-\\underset{\\mathcal{O}(\\varepsilon)}{\\frac{\\mathrm{d}h}{h}}\\underset{\\mathcal{O}(\\varepsilon)}{\\frac{\\mathrm{d}u}{c}} \\)"
+            },
+            {
+               "text": "Therefore:"
+            },
+            {
+               "equation": "\\( \\underset{\\mathcal{O}(\\varepsilon)}{\\frac{\\mathrm{d}u}{c}}=\\underset{\\mathcal{O}(\\varepsilon)}{\\frac{\\mathrm{d}h}{h}}-\\underset{\\mathcal{O}(\\varepsilon^2)}{\\frac{\\mathrm{d}h}{h}{\\frac{\\mathrm{d}u}{c}}} \\)"
+            },
+            {
+               "text": "To the first order in \\( \\varepsilon \\ll 1 \\) we find that:"
+            },
+            {
+               "equation": "\\( {\\frac{\\mathrm{d}u}{c}}={\\frac{\\mathrm{d}h}{h}}-\\mathcal{O}(\\varepsilon^2)\\)"
+            },
+            {
+               "text": "Multiplying by&nbsp;\\(ch\\), we get:"
+            },
+            {
+               "equation": "\\( c\\,\\mathrm{d}h = h\\,\\mathrm{d}u + \\mathcal{O}(ch\\varepsilon^2)\\)"
+            }
+         ]
+      },
+      {
+         "statement": "Apply Bernoulli's equation along the water surface (which is a streamline at constant pressure) to find that \\(g\\,\\mathrm{d} h = c\\,\\mathrm{d} u + \\mathcal{O}(c^2\\varepsilon^2)\\).",
+         "worked_solutions": [
+            {
+               "text": "The free surface is a streamline. The flow being considered steady and the fluid being assumed inviscid with constant density, we apply Bernoulli&rsquo;s equation along&nbsp;\\( \\enclose{circle}{3} \\):"
+            },
+            {
+               "equation": "\\( p+\\frac{1}{2}\\rho U^2+\\rho gz=C \\longrightarrow \\begin{cases} \\mathrm{at}\\space \\enclose{circle}{3}\\cap\\enclose{circle}{1} &amp; p_{at} &amp;+&amp; \\rho c^2/2 &amp; +&amp;\\rho gh &amp;= &amp;C \\\\ \\mathrm{at}\\space \\enclose{circle}{3}\\cap\\enclose{circle}{2} &amp; p_{at} &amp;+&amp; \\rho (\\mathrm{d}u-c)^2/2 &amp; +&amp;\\rho g(h+\\mathrm{d}h) &amp;= &amp;C \\end{cases} \\)"
+            },
+            {
+               "text": "Subtracting the first line from the second one in the above system gives:"
+            },
+            {
+               "equation": "\\( \\frac{1}{2}\\rho \\mathrm{d}u^2-\\rho c \\mathrm{d}u+\\rho g\\mathrm{d}h=0 \\)"
+            },
+            {
+               "text": "Diving by&nbsp;\\( \\rho c^2 \\)&nbsp;and considering the orders of the terms:"
+            },
+            {
+               "equation": "\\( \\underbrace{ \\frac{1}{2}\\left ( \\frac{\\mathrm{d}u}{c} \\right)^2}_{\\mathcal{O}(\\varepsilon^2)} -\\underbrace{ \\frac{\\mathrm{d}u}{c} }_{\\mathcal{O}(\\varepsilon)} +\\underbrace{ \\frac{g}{c^2}\\mathrm{d}h }_{\\mathcal{O}(\\varepsilon)} \\)"
+            },
+            {
+               "text": "Therefore, to the first order of&nbsp;\\( \\varepsilon \\):"
+            },
+            {
+               "equation": "\\( g\\mathrm{d}h=c\\space \\mathrm{d}h+\\mathcal{O(c^2\\varepsilon^2)}\\)"
+            }
+         ]
+      },
+      {
+         "statement": "Find an expression for \\(c\\).",
+         "pre_response_text": "\\( c = \\)",
+         "response": {
+            "mode": "Maple",
+            "mapleAnswer": "sqrt(g*h)"
+         },
+         "final_answer": {
+            "text": "\\(\\boxed{c=\\sqrt{gh}\\space}\\)"
+         },
+         "worked_solutions": [
+            {
+               "text": "From (a)&nbsp;\\(\\times c/h\\), and (b):"
+            },
+            {
+               "text": "\\( \\begin{cases} c\\&gt;\\mathrm{d}u &amp;=&amp; \\left(c^2/h\\right )\\mathrm{d}h &amp;+ &amp; \\mathcal{O\\left (c^2\\varepsilon^2\\right)} \\\\ g\\&gt;\\mathrm{d}h &amp;=&amp; \\space\\space \\space\\space\\space\\space c\\&gt;\\mathrm{d}h &amp;+ &amp; \\mathcal{O\\left (c^2\\varepsilon^2\\right)} \\end{cases} \\longrightarrow \\space c^2=gh \\longrightarrow \\) therefore:"
+            }
+         ]
+      },
+      {
+         "statement": "A truck travels through shallow water at some speed \\(U\\). The ratio of \\(U\\) with \\(c\\) is known as the Froude number (noted \\(\\mathrm{Fr}\\)) <br> Sketch the wave pattern for \\(\\mathrm{Fr} > 1\\). Show that a Mach cone must form.",
+         "worked_solutions": [
+            {
+               "text": "The wave pattern for \\( \\mathrm{Fr}&gt;1 \\) is:",
+               "media": [
+                  "18_3_fig4.png"
+               ]
+            }
+         ]
+      },
+      {
+         "statement": "A truck travels through shallow water at some speed \\(U\\). The ratio of \\(U\\) with \\(c\\) is known as the Froude number (noted \\(\\mathrm{Fr}\\)) <br> Find a relationship between the Froude number and the Mach cone angle.",
+         "final_answer": {
+            "text": "\\( \\boxed{\\theta=\\sin^{-1}\\left(\\frac{1}{\\mathrm{Fr}}\\right)} \\)"
+         },
+         "worked_solutions": [
+            {
+               "text": "Based on the sketch above,&nbsp;\\( \\sin(\\theta)=c\\tau/U\\tau=c/U=1/\\mathrm{Fr} \\)"
+            }
+         ]
+      },
+      {
+         "statement": "A truck travels through shallow water at some speed \\(U\\). The ratio of \\(U\\) with \\(c\\) is known as the Froude number (noted \\(\\mathrm{Fr}\\)) <br> Estimate the speed of the truck in the picture below (state your assumptions).",
+         "media": [
+            "Truck.jpg"
+         ],
+         "response": {
+            "mode": "Numeric",
+            "showUnits": true,
+            "grading": "toler_abs",
+            "err": 0.01,
+            "answer": {
+               "num": 16,
+               "units": "km/h"
+            }
+         },
+         "final_answer": {
+            "text": "\\(U\\approx \\boxed{16 \\space \\mathrm{km/h}}\\)"
+         },
+         "worked_solutions": [
+            {
+               "media": [
+                  "small_18_3_fig5.png"
+               ]
+            },
+            {
+               "text": "Reading from the picture:"
+            },
+            {
+               "equation": "\\( \\tan(\\theta)\\approx\\frac{7.5}{18}\\longrightarrow \\theta \\approx 23^{\\circ} \\)"
+            },
+            {
+               "text": "The Froude number is&nbsp;\\( \\mathrm{Fr}=1/\\sin(\\theta) \\approx 2.6 \\). Assuming the water level to be around&nbsp;\\( 30 \\space \\mathrm{cm} \\)&nbsp;and taking&nbsp;\\( g=9.8 \\space \\mathrm{m/s^2} \\)&nbsp;we have:"
+            },
+            {
+               "equation": "\\( U=c\\mathrm{Fr}=\\mathrm{Fr}\\sqrt{gh}\\)"
+            }
+         ]
+      },
+      {
+         "statement": "A truck travels through shallow water at some speed \\(U\\). The ratio of \\(U\\) with \\(c\\) is known as the Froude number (noted \\(\\mathrm{Fr}\\)) <br> Suppose that the bottom wall is slightly rising in the wave direction. Based on your analysis for the horizontal wall, explain why you expect the wave front to steepen. Relate this finding to your observation of breaking waves on the beach.",
+         "worked_solutions": [
+            {
+               "text": "If the bottom wall is rising with&nbsp;\\(x\\), then&nbsp;\\(h(x)\\)&nbsp;is decreasing. Consequently,&nbsp;\\( c=\\sqrt{gh} \\)&nbsp;would be reducing. This means that compression waves from downstream would be catching up with the ones further upstream (since they travel at reduced speeds). This in turn suggests that the compression waves &#39;accumulate&#39; as the water level decreases, contributing to the steepening of the compression front which eventually forms a breaking wave."
+            }
+         ]
+      }
+   ],
+   "uid": "8c2076ec-28aa-4f3a-96ab-b0fdbf220131"
+}

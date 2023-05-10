@@ -1,0 +1,59 @@
+{% from 'addMedia.html' import addMedia %}
+{% from 'responseWrapper.html' import responseWrapper %}
+
+{% macro stepByStepStructTuto(part, id, propname) %}
+
+{% for item in part.structured_tutorial %}
+{% set item_propname = propname + ".structured_tutorial." + loop.index|string %}
+<div class="sbs-step{{ ' active' if loop.first }}{{  ' second' if loop.index == 2 }}{{ ' last' if loop.last }}">
+  {% if item.h5p_link %}
+    <div data-propname="{{ item_propname }}.h5p_link">
+      <iframe src='{{ item.h5p_link }}' width='1090' height='713' frameborder='0' allowfullscreen='allowfullscreen'></iframe>
+      <script src='https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js' charset='UTF-8'></script>
+    </div>
+  {% endif %}
+  {% if item.text %}
+  <p data-propname="{{ item_propname }}.text">
+    <!-- CHANGE STRUCTURED TUTORIAL TEXT HERE -->
+    {{ item.text }}
+  </p>
+  {% endif %}
+  {% if item.equation %}
+  <p class="sbs-eq" data-propname="{{ item_propname }}.equation">
+    <!-- CHANGE STRUCTURED TUTORIAL EQUATION HERE -->
+    {{ item.equation }}
+  </p>
+  {% endif %}
+  {% if item.media %}
+  {{ addMedia(item.media, item_propname) }}
+  {% endif %}
+
+  <!-- {% set part_propname = "parts." + id|string %} -->
+  {% set part_propname = item_propname %}
+  {% if item.response %}
+    {{ responseWrapper(item, id, part_propname, False) }}
+
+  {% elif item.responses %}
+    {% set part_index = loop.index %}
+    {% for i in item.responses %}
+      {% set response_propname = part_propname + ".responses." + loop.index|string %}
+      {{ responseWrapper(i, part_index, response_propname, False) }}
+    {% endfor %}
+
+  {% elif item.custom_response %}
+    <div class="response-wrapper" data-propname="{{ part_propname }}.custom_response">
+      <p>{{ item.custom_response }}</p>
+    </div>
+
+  {% endif %}
+
+</div>
+{% if loop.first and loop.length > 1 %}
+<div class="sbs-nav">
+  <div class="btn btn-default disabled sbs-step-up">⬆ Previous Step ⬆</div>
+  <div class="btn btn-default sbs-step-down">⬇ Next Step ⬇</div>
+  <div class="btn btn-default sbs-reveal-all">Show All</div>
+</div>
+{% endif %}
+{% endfor %}
+{% endmacro %}

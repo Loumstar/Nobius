@@ -1,0 +1,140 @@
+{% from 'stepByStepWorkedSolns.html' import stepByStepWorkedSolns %}
+{% from 'stepByStepStructTuto.html' import stepByStepStructTuto %}
+{% from 'addMedia.html' import addMedia %}
+
+{% macro answerHelp(part, part_index, propname, add_maple_preview_help=True) %}
+<div class="answers-help-container">
+    <div class="answers-nav-container">
+        {% if part.isMaple %}
+        <div class="answers-nav-button equation-help-button" id="eh-btn{{ part_index }}">
+            <p>Equation Help</p>
+        </div>
+
+        {% if part.structured_tutorial or part.final_answer or part.worked_solutions %}
+        <div class="study-technical-help-separator"></div>
+        {% endif %}
+
+        {% endif %}
+
+        {% if part.structured_tutorial %}
+        <div class="answers-nav-button structured-tutorial-button" id="st-btn{{ part_index }}">
+            <p>Structured Tutorial</p>
+        </div>
+        {% endif %}
+
+        {% if part.final_answer %}
+        <div class="answers-nav-button final-answer-button" id="fa-btn{{ part_index }}">
+            <p>Show Answer</p>
+        </div>
+        {% endif %}
+
+        {% if part.worked_solutions %}
+        <div class="answers-nav-button worked-solutions-button" id="ws-btn{{ part_index }}">
+            <p>Worked Solutions</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="answers-warning-tippy awt-structured-tutorial">
+        <div class="awt-text">
+            An instructor-led video working through the problem, auto-pausing when it's your turn to work.
+            Good if you don't know where to start, or are stuck half-way through.
+        </div>
+    </div>
+    <div class="answers-warning-tippy awt-show-answer">
+        <div class="awt-text">
+            Check your own answer before revealing the answer.
+            Revealing the answer takes away the chance to get it right yourself.
+        </div>
+    </div>
+    <div class="answers-warning-tippy awt-worked-solutions">
+        <svg class="awt-svg" id="answers-warning-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+        <div class="awt-text">
+            Only view worked solutions after making your best independent attempt. Seeing solutions ruins the learning opportunity.
+            If you are stuck half-way, try (hard!) to only reveal necessary steps before continuing independently.
+        </div>
+    </div>
+</div>
+
+<div class="answers-container">
+    {# Putting ifs here, as not all current tests have solns, all should eventually though #}
+    {% if part.isMaple %}
+    <div class="equation-help">
+        <div class="header">
+            <h2>How to input expressions</h2>
+        </div>
+        <div class="body">
+            <p>
+                The equation questions use Maple syntax to evaluate expressions. As with Python, basic operators use the symbols 
+                    <span class="code">+</span>
+                    <span class="code">-</span>
+                    <span class="code">*</span>
+                    <span class="code">/</span>
+                    <span class="code">^</span>
+                and parentheses can be used to structure your expressions.
+
+                Some common functions can also be used such as 
+                    <span class="code">sqrt()</span>, 
+                    <span class="code">sin()</span> and 
+                    <span class="code">arcsin()</span>.
+
+                To get the natural exponential, use 
+                    <span class="code">exp()</span> as 
+                    <span class="code">e</span> 
+                is not intepreted as Euler's number.
+            </p>
+            <p>
+                For Greek letters, type the full name of the letter. For example 
+                    <span class="code">mu*U</span> 
+                will render \( \mu U \) (there is no need to use a back slash).
+            </p>
+            {% if add_maple_preview_help %}
+            <p>
+                Click the
+                    <svg class="maple-preview-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                        <circle cx="13" cy="13" r="10"></circle>
+                        <text x="13" y="13">Ω</text>
+                    </svg>
+                to preview your expressions.
+            </p>
+            <p>
+                For example, writing 
+                    <span class="code">exp(i*pi) - 1</span> 
+                will produce:
+            </p>
+            {% endif %}
+            <p class="latex">
+                \( \text{e}^{i \pi} - 1 \)
+            </p>
+        </div>
+    </div>
+    {% endif %}
+    {% if part.worked_solutions %}
+    <div class="worked-solutions" id="ws{{ part_index }}">
+        {{ stepByStepWorkedSolns(part, part_index, propname) }}
+    </div>
+    {% endif %}
+
+    {% if part.final_answer %}
+    <div class="final-answer" id="fa{{ part_index }}">
+        <p data-propname="{{ propname }}.final_answer.text">
+        <!-- CHANGE FINAL ANSWER TEXT HERE -->
+        {{ part.final_answer.text }}
+        </p>
+        {% if part.final_answer.media %}
+        {{ addMedia(part.final_answer.media, propname + ".final_answer") }}
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if part.structured_tutorial %}
+    <div class="structured-tutorial" id="st{{ part_index }}"> <!-- data-propname="parts.{{ part_index }}.structured_tutorial"> -->
+        {{ stepByStepStructTuto(part, part_index, propname) }}
+    </div>
+    {% endif %}
+</div>
+{% endmacro %}

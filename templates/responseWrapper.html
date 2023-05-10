@@ -1,0 +1,41 @@
+{% from 'matrixResponse.html' import matrixResponse %}
+{% from 'answerHelpButton.html' import answerHelpButton %}
+
+{% macro responseWrapper(response, part_index, propname, add_help=True) %}
+{% if response is iterable and response.response is not iterable %}
+<div class="response-wrapper" data-propname="{{ propname + ".response" }}">
+{% else %}
+<div class="response-wrapper">
+{% endif %}
+
+  {% if response.pre_response_text %}
+  <div class="pre-response-text">
+    <p data-propname="{{ propname }}.pre_response_text">
+      <!-- CHANGE PRE RESPONSE TEXT HERE -->
+      {{ response.pre_response_text }}
+    </p>
+  </div>
+  {% endif %}
+
+  {# Mark location of response area #}
+  {% if response.response is iterable %}
+  {{ matrixResponse(response.response, propname) }}
+  {% else %}
+  <{{ response.response }}>
+  {% endif %}
+
+  {% if response.post_response_text %}
+  <div class="post-response-text">
+    <p data-propname="{{ propname }}.post_response_text">
+      <!-- CHANGE POST RESPONSE TEXT HERE -->
+      {{ response.post_response_text }}
+    </p>
+  </div>
+  {% endif %}
+
+  {% if add_help %}
+  {{ answerHelpButton(part_index) }}
+  {% endif %}
+
+</div>
+{% endmacro %}

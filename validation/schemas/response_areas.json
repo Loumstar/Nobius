@@ -1,0 +1,338 @@
+{
+    "$schema": "http://json-schema.org/draft/2019-09/schema#",
+    "title": "Schema for response property in a question.json file.",
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "weighting": {"type": "number"},
+        "comment": {"type": "string"},
+        "mode": {
+            "type": "string",
+            "enum": [
+                "Maple",
+                "List",
+                "Non Permuting Multiple Choice",
+                "Non Permuting Multiple Selection",
+                "Numeric",
+                "True False",
+                "Formula",
+                "Restricted Formula",
+                "Dimensioned Formula",
+                "Formula Mod C",
+                "Equation",
+                "Multi Formula",
+                "Formula List",
+                "Ntuple",
+                "Essay",
+                "Multiple Selection",
+                "Document Upload"
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "if": {
+                "properties": {"mode": {"const": "Maple"}}
+            },
+            "then": {
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": ["formula", "maple"]
+                    },
+                    "plot": {
+                        "type": "string",
+                        "const": ""
+                    },
+                    "allow2d": {"type": "integer"},
+                    "mathConversionMode": {
+                        "type": "number",
+                        "const": 0
+                    },
+                    "mapleAnswer": {"type": "string"},
+                    "maple": {"type": "string"},
+                    "custompreview": {"type": "string"},
+                    "libname": {"type": "string"}
+                },
+                "if": {
+                    "properties": {"type": {"const": "maple"}}
+                },
+                "then": {
+                    "properties": {"allow2d": {"enum": [0, 2]}}
+                },
+                "else": {
+                    "properties": {"allow2d": {"const": 1}}
+                },
+                "required": [
+                    "type",
+                    "plot",
+                    "allow2d",
+                    "mathConversionMode",
+                    "mapleAnswer",
+                    "maple",
+                    "custompreview"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {"mode": {"const": "List"}}
+            },
+            "then": {
+                "properties": {
+                    "display": {
+                        "type": "object",
+                        "properties": {
+                            "display": {
+                                "type": "string",
+                                "enum": ["menu", "text"]
+                            },
+                            "permute": {"type": "boolean"}
+                        },
+                        "required": ["display", "permute"]
+                    },
+                    "grader": {
+                        "type": "string",
+                        "enum": ["exact", "relaxed", "regex"]
+                    },
+                    "answers": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"type": "string"}
+                    },
+                    "credits": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"type": "number"}
+                    }
+                },
+                "required": [
+                    "display",
+                    "grader",
+                    "answers",
+                    "credits"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {"mode": {"const": "Non Permuting Multiple Choice"}}
+            },
+            "then": {
+                "properties": {
+                    "display": {
+                        "type": "string",
+                        "enum": ["vertical", "horizontal"]
+                    },
+                    "choices": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"type": "string"}
+                    },
+                    "answer": {"type": "integer"}
+                },
+                "required": [
+                    "display",
+                    "choices",
+                    "answer"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {"mode": {"const": "Non Permuting Multiple Selection"}}
+            },
+            "then": {
+                "properties": {
+                    "display": {
+                        "type": "string",
+                        "enum": ["vertical", "horizontal"]
+                    },
+                    "choices": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"type": "string"}
+                    },
+                    "answer": {"type": "string"}
+                },
+                "required": [
+                    "display",
+                    "choices",
+                    "answer"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {"mode": {"const": "Numeric"}}
+            },
+            "then": {
+                "properties": {
+                    "negStyle": {
+                        "type": "string",
+                        "enum": ["minus", "paren", "both"]
+                    },
+                    "numStyle": {"type": "string"},
+                    "grading": {
+                        "type": "string",
+                        "enum": [
+                            "exact_value",
+                            "exact_sigd",
+                            "toler_abs",
+                            "toler_sigd",
+                            "toler_perc"
+                        ]
+                    },
+                    "showUnits": {"type": "boolean"},
+                    "answer": {
+                        "type": "object",
+                        "properties": {
+                            "num": {"type": ["number", "string"]},
+                            "units": {"type": "string"}
+                        },
+                        "required": ["num", "units"]
+                    },
+                    "if": {"showUnits": {"const": false}},
+                    "then": {"answer": {"properties": {"units": {"const": ""}}}},
+                    "else": {"answer": {"properties": {"units": {"not": {"const": ""}}}}}
+                },
+                "required": [
+                    "negStyle",
+                    "numStyle",
+                    "grading",
+                    "showUnits",
+                    "answer"
+                ],
+                "allOf": [
+                    {
+                        "if": {
+                            "properties": {"grading": {"enum": ["exact_sigd", "toler_sigd"]}}
+                        },
+                        "then": {
+                            "properties": {"digit": {"type": "integer"}},
+                            "required": ["digit"]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {"grading": {"enum": ["toler_abs", "toler_sigd"]}}
+                        },
+                        "then": {
+                            "properties": {"err": {"type": "number"}},
+                            "required": ["err"]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {"grading": {"const": "toler_perc"}}
+                        },
+                        "then": {
+                            "properties": {"perc": {"type": "number"}},
+                            "required": ["perc"]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {"mode": {"const": "True False"}}
+            },
+            "then": {
+                "properties": {
+                    "answer": {
+                        "type": "integer",
+                        "enum": [1, 2]
+                    },
+                    "choices": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                            "type": "string",
+                            "enum": ["true", "false"],
+                            "uniqueItems": true
+                        }
+                    }
+                },
+                "required": ["answer", "choices"]
+            }
+        },
+        {
+            "if": {
+                "properties": {"mode": {"const": "Essay"}}
+            },
+            "then": {
+                "properties": {
+                    "keywords": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "uniqueItems": true
+                        }
+                    },
+                    "maxWordcount": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": ["keywords", "maxWordcount"]
+            }
+        },
+        {
+            "if": {
+                "properties": {"mode": {"const": "Multiple Selection"}}
+            },
+            "then": {
+                "properties": {
+                    "choices": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"type": "string"}
+                    },
+                    "answer": {"type": "string"}
+                },
+                "required": [
+                    "choices",
+                    "answer"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {"mode": {"const": "Document Upload"}}
+            },
+            "then": {
+                "properties": {
+                    "fileExtensions": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"type": "string"}
+                    },
+                    "codeType": {
+                        "type": "integer",
+                        "const": 0
+                    },
+                    "forceUpload": {
+                        "type": "boolean"
+                    },
+                    "nonGradeable": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "fileExtensions",
+                    "codeType",
+                    "forceUpload",
+                    "nonGradeable"
+                ]
+            }
+        }
+    ],
+    "required": [
+        "name",
+        "mode",
+        "weighting",
+        "comment"
+    ]
+}

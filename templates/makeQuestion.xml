@@ -1,0 +1,54 @@
+{% from 'questionText.html' import questionText %}
+{% from 'parseParams.xml' import addParameter,
+addListParameter,
+addDisplayParameter %}
+
+{% macro makeQuestion(question) %}
+  <question uid="{{ question.uid }}">
+    <mode>Inline</mode>
+    <name>
+      <![CDATA[ {{ question.number }} {{ question.title }} ]]>
+    </name>
+    <editing>useHTML</editing>
+    {% if "algorithm" in question %}
+      <algorithm>
+        <![CDATA[ {{ question.algorithm }} ]]>
+      </algorithm>
+    {% endif %}
+    <privacy>10</privacy>
+    <allowRepublish>false</allowRepublish>
+    <attributeAuthor>true</attributeAuthor>
+    <modifiedIn>15.0</modifiedIn>
+    <difficulty>0.0</difficulty>
+    {# Render Question HTML below #}
+    <text>
+      {% filter indent(8, True) %}
+        <![CDATA[ {{ questionText(question) }} ]]>
+      {% endfilter %}
+    </text>
+    <weighting>
+      {%- for ra in question.response_areas -%}
+        {{- ra.weighting -}}{{- "," if not loop.last else "" -}}
+      {%- endfor -%}
+    </weighting>
+    <numbering>alpha</numbering>
+
+    {# Data for each of the response areas marked <text> with their identifiers (<1>, <2>, ...) #}
+    <parts>
+      {% for response_area in question.response_areas %}
+        <part>
+          {# Add each key-value pair from the response area parameters #}
+          {% for key, value in response_area.items() %}
+            {% if key in["choices", "credits", "answers"] %}
+              {{ addListParameter(key, value) }}
+            {% elif key == "display" %}
+              {{ addDisplayParameter(value) }}
+            {% else %}
+              {{ addParameter(key, value) }}
+            {% endif %}
+          {% endfor %}
+        </part>
+      {% endfor %}
+    </parts>
+  </question>
+{% endmacro %}
